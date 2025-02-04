@@ -1,0 +1,3 @@
+password=JcikwiU1HEKkmI85
+link=https://tkoadlvpkmcfrdhbslug.supabase.co
+jwt secret=xbMkgFOaCqMWassmvDZkjpYsj6OCpL6nHz7xtZMZoCs/s3EwehixNmfIyqTZ5IUcz8l3JW26lkOdt38wujqqJg==
