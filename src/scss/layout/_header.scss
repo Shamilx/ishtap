@@ -1,0 +1,40 @@
+header {
+  ul {
+    a {
+      display: flex;
+      font-weight: 700;
+      align-items: center;
+      transition: all ease 0.2s;
+
+      &:hover {
+        color: #d8c4b6;
+      }
+    }
+  }
+
+  #button-explore {
+    background-color: #f5efe7;
+    color: black;
+    padding: 10px 32px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    font-weight: 700;
+    border: 2px solid #f5efe7;
+    transition: all ease 0.3s;
+
+    &:hover {
+      background-color: transparent;
+      color: #f5efe7;
+    }
+  }
+
+  #button-login {
+    background-color: #f5efe7;
+    border-radius: 50px;
+    width: 48px;
+    height: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

@@ -1,10 +1,5 @@
 import React from "react";
-import { Koulen } from "next/font/google";
-
-const koulen = Koulen({
-  weight: "400",
-  subsets: ["latin"],
-});
+import { koulen } from "@/fonts/fonts";
 
 function Logo() {
   return (
