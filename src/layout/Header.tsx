@@ -1,33 +1,50 @@
-import Logo from "@/components/Logo";
-import React from "react";
+"use client";
 
-import { AiOutlineUser } from "react-icons/ai";
+import Logo from "@/components/Logo";
+import React, { useState } from "react";
 import { HiBars3 } from "react-icons/hi2";
+import MenuDropDown from "./MenuDropDown";
+
+import dynamic from "next/dynamic";
+
+// Dynamically import the component with ssr: false
+const ClientSideDrawer = dynamic(() => import("./Drawer"), {
+  ssr: false,
+});
 
 function Header() {
+  const [isOpen, setIsOpen] = useState(false);
+  const toggleDrawer = () => {
+    setIsOpen((prevState) => !prevState);
+  };
+
   return (
-    <header className="w-full bg-primary py-4 px-4 sm:px-12 text-white flex items-center">
-      <Logo />
+    <>
+      <header className="flex w-full items-center bg-primary px-4 text-white sm:px-12">
+        <Logo />
 
-      <div className="ms-auto flex gap-4">
-        <ul className="hidden lg:flex gap-4">
-          <a href="/home">Home</a>
-          <a href="/contact">Contact</a>
-          <a href="/aboutus">About us</a>
-          <a href="/privacy">Privacy Policy</a>
-        </ul>
+        <div className="ms-auto flex gap-4">
+          <ul className="hidden gap-4 lg:flex">
+            <a href="/home">Home</a>
+            <a href="/contact">Contact</a>
+            <a href="/aboutus">About us</a>
+            <a href="/privacy">Privacy Policy</a>
+          </ul>
 
-        <a href="/" id="button-explore" className="hidden sm:flex">
-          Explore
-        </a>
+          <a href="/" id="button-explore" className="hidden sm:flex">
+            Explore
+          </a>
 
-        <a href="/login" id="button-login">
-          <AiOutlineUser size={24} color="black" />
-        </a>
+          <MenuDropDown />
 
-        <button className="block lg:hidden"><HiBars3 size={32} color="white"/></button>
-      </div>
-    </header>
+          <button className="block lg:hidden" onClick={toggleDrawer}>
+            <HiBars3 size={32} color="white" />
+          </button>
+        </div>
+      </header>
+
+      <ClientSideDrawer toggle={toggleDrawer} isOpen={isOpen} />
+    </>
   );
 }
 

@@ -1,4 +1,6 @@
 header {
+  min-height: 120px;
+
   ul {
     a {
       display: flex;
@@ -36,5 +38,52 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+}
+
+#modernDrawer {
+  padding: 24px;
+  padding-top: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  position: relative;
+
+  #btn-explore {
+    width: 210px;
+    height: 50px;
+    font-weight: bold;
+    color: #fff;
+    border: 1px solid #6b6b6b;
+    border-radius: 5px;
+    text-transform: uppercase;
+  }
+
+  #close-btn {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+  }
+
+  #links {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    align-items: start;
+    width: 100%;
+    gap: 10px;
+
+    a {
+      width: 100%;
+      font-weight: bold;
+      font-size: 18px;
+      text-decoration: underline;
+      text-decoration-thickness: 3px;
+      text-underline-offset: 6px;
+      background-color: rgba(43, 62, 93, 0.8);
+      padding: 10px 24px;
+      border-radius: 5px;
+    }
   }
 }

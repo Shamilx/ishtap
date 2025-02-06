@@ -1,4 +1,4 @@
-import { Koulen,Open_Sans } from "next/font/google";
+import { Jost, Koulen, Open_Sans } from "next/font/google";
 
 export const koulen = Koulen({
   weight: "400",
@@ -6,6 +6,11 @@ export const koulen = Koulen({
 });
 
 export const open_sans = Open_Sans({
-    weight: ["300","400","500","600","700","800"],
-    subsets: ["latin"]
-})
+  weight: ["300", "400", "500", "600", "700", "800"],
+  subsets: ["latin"],
+});
+
+export const jost = Jost({
+  weight: ["300", "400", "500", "600", "700", "800"],
+  subsets: ["latin"],
+});
