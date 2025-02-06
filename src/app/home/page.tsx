@@ -3,8 +3,7 @@
 import { jost } from "@/fonts/fonts";
 import Footer from "@/layout/Footer";
 import Header from "@/layout/Header";
-import supabase from "@/supabase/supabase";
-import React, { useEffect } from "react";
+import React from "react";
 
 function Page() {
   return (

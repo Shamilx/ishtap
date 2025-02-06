@@ -6,6 +6,7 @@ import { HiBars3 } from "react-icons/hi2";
 import MenuDropDown from "./MenuDropDown";
 
 import dynamic from "next/dynamic";
+import Link from "next/link";
 
 // Dynamically import the component with ssr: false
 const ClientSideDrawer = dynamic(() => import("./Drawer"), {
@@ -25,15 +26,15 @@ function Header() {
 
         <div className="ms-auto flex gap-4">
           <ul className="hidden gap-4 lg:flex">
-            <a href="/home">Home</a>
-            <a href="/contact">Contact</a>
-            <a href="/aboutus">About us</a>
-            <a href="/privacy">Privacy Policy</a>
+            <Link href="/home">Home</Link>
+            <Link href="/contact">Contact</Link>
+            <Link href="/aboutus">About us</Link>
+            <Link href="/privacy">Privacy Policy</Link>
           </ul>
 
-          <a href="/" id="button-explore" className="hidden sm:flex">
+          <Link href="/" id="button-explore" className="hidden sm:flex">
             Explore
-          </a>
+          </Link>
 
           <MenuDropDown />
 

@@ -1,12 +1,12 @@
 "use client";
 
 import ModernDrawer from "react-modern-drawer";
-import { useState } from "react";
 import "react-modern-drawer/dist/index.css";
 import { jost } from "@/fonts/fonts";
 import { IoIosClose } from "react-icons/io";
+import Link from "next/link";
 
-function Drawer({ isOpen, toggle }: { isOpen: any; toggle: any }) {
+function Drawer({ isOpen, toggle }: { isOpen: boolean; toggle: () => void }) {
   return (
     <>
       <ModernDrawer
@@ -29,10 +29,10 @@ function Drawer({ isOpen, toggle }: { isOpen: any; toggle: any }) {
           <div className="w-full border border-gray-700 border-opacity-60"></div>
 
           <div id="links">
-            <a href="/home">Home</a>
-            <a href="/contact">Contact</a>
-            <a href="/aboutus">About us</a>
-            <a href="/privacy">Privacy Policy</a>
+            <Link href="/home">Home</Link>
+            <Link href="/contact">Contact</Link>
+            <Link href="/aboutus">About us</Link>
+            <Link href="/privacy">Privacy Policy</Link>
           </div>
         </div>
       </ModernDrawer>

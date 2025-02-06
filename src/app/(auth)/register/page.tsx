@@ -4,6 +4,7 @@ import Loading from "@/components/Loading";
 import Logo from "@/components/Logo";
 import { jost, koulen } from "@/fonts/fonts";
 import supabase from "@/supabase/supabase";
+import Link from "next/link";
 import React, { useState } from "react";
 
 function Register() {
@@ -56,9 +57,9 @@ function Register() {
           <button type="submit" id="done-btn">
             Register
           </button>
-          <a href="/login" id="change">
+          <Link href="/login" id="change">
             Don’t have an account? <span>Sign in.</span>
-          </a>
+          </Link>
           <div className="flex items-center justify-center">
             {errorText && errorText === "loading" ? (
               <Loading />

@@ -3,7 +3,6 @@
 import Loading from "@/components/Loading";
 import supabase from "@/supabase/supabase";
 import { Menu, MenuButton, MenuItem, MenuItems } from "@headlessui/react";
-import { useEffect, useState } from "react";
 import { AiOutlineUser } from "react-icons/ai";
 import { IoIosLogIn } from "react-icons/io";
 import { HiUserAdd } from "react-icons/hi";
@@ -71,9 +70,7 @@ function MenuDropDown() {
             <button
               className="group flex w-full items-center gap-2 rounded-lg px-3 py-1.5 data-[focus]:bg-white/10"
               onClick={async () => {
-                const { error } = await supabase.auth.signOut();
-
-                router.refresh();
+                await supabase.auth.signOut();
               }}
             >
               <IoIosLogIn size={24} color="white" />

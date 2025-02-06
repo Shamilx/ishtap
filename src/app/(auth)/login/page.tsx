@@ -4,6 +4,7 @@ import Loading from "@/components/Loading";
 import Logo from "@/components/Logo";
 import { jost, koulen } from "@/fonts/fonts";
 import supabase from "@/supabase/supabase";
+import Link from "next/link";
 import React, { useState } from "react";
 
 function Login() {
@@ -21,7 +22,7 @@ function Login() {
 
     if (!email || !password) return;
 
-    const { data, error } = await supabase.auth.signInWithPassword({
+    const { error } = await supabase.auth.signInWithPassword({
       email: email as string,
       password: password as string,
     });
@@ -56,9 +57,9 @@ function Login() {
           <button type="submit" id="done-btn">
             Login
           </button>
-          <a href="/register" id="change">
+          <Link href="/register" id="change">
             Don’t have an account? <span>Sign up.</span>
-          </a>
+          </Link>
           <div className="flex items-center justify-center">
             {errorText && errorText === "loading" ? (
               <Loading />

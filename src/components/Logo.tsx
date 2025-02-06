@@ -1,11 +1,12 @@
 import React from "react";
 import { koulen } from "@/fonts/fonts";
+import Link from "next/link";
 
 function Logo() {
   return (
-    <a href="/" style={{fontSize: 48, fontFamily: `${koulen.style.fontFamily}` }}>
+    <Link href="/" style={{fontSize: 48, fontFamily: `${koulen.style.fontFamily}` }}>
       ISHTAP
-    </a>
+    </Link>
   );
 }
 
