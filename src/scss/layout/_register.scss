@@ -75,7 +75,7 @@
   }
   
   @media screen and (max-width: 1024px) {
-    #login {
+    #register {
       #left {
         flex: 0.5;
       }
@@ -87,7 +87,7 @@
   }
   
   @media screen and (max-width: 768px) {
-    #login {
+    #register {
       #left {
         display: none;
       }
@@ -99,7 +99,7 @@
   }
   
   @media screen and (max-width: 640px) {
-    #login {
+    #register {
       #right {
         padding: 64px 24px;
       }
