@@ -21,11 +21,11 @@ function Header() {
 
   return (
     <>
-      <header className="flex w-full items-center bg-primary px-4 text-white sm:px-12">
+      <header className="flex w-full items-center px-4 text-white sm:px-12">
         <Logo />
 
-        <div className="ms-auto flex gap-4">
-          <ul className="hidden gap-4 lg:flex">
+        <div className="ms-auto flex gap-6">
+          <ul className="hidden gap-6 lg:flex">
             <Link href="/home">Home</Link>
             <Link href="/contact">Contact</Link>
             <Link href="/aboutus">About us</Link>

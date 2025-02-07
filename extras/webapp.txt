@@ -1,0 +1,60 @@
+Filters:
+Location (remote, hybrid, on-site)
+Job Type (full-time, part-time, contract, freelance, internship)
+Industry (IT, Marketing, Finance, etc.)
+Salary Range
+Experience Level (Entry, Mid, Senior)
+Date Posted (last 24 hours, last week, etc.)
+Sort Options (Newest, Most Relevant, Highest Paying)
+
+2. Job Listings / Work Opportunities
+Card Layout or List View
+Job Title
+Company Name & Logo
+Job Type (Full-time, Remote, etc.)
+Location
+Salary Estimate
+Required Skills (Tags or Badges)
+Date Posted
+"Apply Now" or "Save Job" Button
+
+3. Job Details / Expanded View
+Job Description
+Responsibilities & Requirements
+About the Company (Company Profile Link)
+Benefits & Perks
+Hiring Process Overview
+"Apply Now" Button (External or Direct Apply)
+Contact HR or Message Employer Button
+
+4. Company Profiles
+Company Name & Logo
+Company Overview & Website
+Open Positions
+Employee Reviews & Ratings
+Industry & Location
+
+5. User Actions
+Save Jobs for Later
+Apply Tracking (Application Status)
+Bookmark or Favorite Jobs
+Report a Job Posting
+
+6. Notifications & Recommendations
+Job Alerts (via email or app notifications)
+Recommended Jobs (based on browsing history, skills, or location)
+"People Also Applied For" Section
+
+7. Sidebar or Navigation Elements
+Profile & Dashboard Link
+Categories (IT, Finance, Healthcare, etc.)
+Popular Searches & Trending Jobs
+
+8. Call-to-Actions & Engagement
+"Create a Profile to Get Better Matches"
+"Refer a Friend & Earn" (for referral programs)
+"Upload Your Resume for Quick Apply"
+
+9. Map Integration (Optional)
+Display job locations on an interactive map
+Click markers to view job details

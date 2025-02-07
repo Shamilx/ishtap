@@ -8,7 +8,9 @@ import React from "react";
 function Page() {
   return (
     <div id="home">
-      <Header />
+      <div className="absolute w-full z-10">
+        <Header />
+      </div>
 
       <div id="main-content">
         <div id="info" style={{ fontFamily: `${jost.style.fontFamily}` }}>
@@ -23,9 +25,12 @@ function Page() {
             faucibus. Integer eget orci libero.
           </p>
         </div>
+
       </div>
 
-      <Footer />
+      <div className="absolute w-full bottom-0 z-10">
+          <Footer />
+        </div>
     </div>
   );
 }

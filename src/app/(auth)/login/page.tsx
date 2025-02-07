@@ -57,7 +57,7 @@ function Login() {
           <button type="submit" id="done-btn">
             Login
           </button>
-          <Link href="/register" id="change">
+          <Link href="/register" id="change" replace>
             Don’t have an account? <span>Sign up.</span>
           </Link>
           <div className="flex items-center justify-center">

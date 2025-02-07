@@ -1,7 +1,9 @@
 #home {
+  min-height: 100vh;
+  
   #main-content {
     position: relative;
-    min-height: 90vh;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -39,7 +41,7 @@
   #main-content::before {
     content: "";
     width: 100%;
-    min-height: 90vh;
+    min-height: 100vh;
     background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)),
       url("../../assets/images/home_background.jpg");
     background-size: cover;
