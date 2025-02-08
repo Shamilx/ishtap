@@ -1,0 +1,46 @@
+#headermain {
+  min-height: 120px;
+
+  #button-add {
+    background-color: #213555;
+    border-radius: 50px;
+    width: 48px;
+    height: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all ease 0.3s;
+
+    &:hover {
+      background-color: #142c54;
+    }
+  }
+
+  #button-login {
+    background-color: #213555;
+    border-radius: 50px;
+    width: 48px;
+    height: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all ease 0.3s;
+
+    &:hover {
+      background-color: #142c54;
+    }
+  }
+
+  ul {
+    a {
+      display: flex;
+      font-weight: 700;
+      align-items: center;
+      transition: all ease 0.2s;
+
+      &:hover {
+        color: #d8c4b6;
+      }
+    }
+  }
+}

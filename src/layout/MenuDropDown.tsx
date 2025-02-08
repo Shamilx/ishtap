@@ -19,15 +19,15 @@ function MenuDropDown() {
     return (
       <Menu>
         <MenuButton className="rounded-md focus:outline-none">
-          <a id="button-login">
-            <AiOutlineUser size={24} color="black" />
-          </a>
+          <div id="button-login">
+            <AiOutlineUser size={24} color="white" />
+          </div>
         </MenuButton>
 
         <MenuItems
           transition
           anchor="bottom end"
-          className="mt-4 w-52 origin-top-right rounded-xl border border-white/5 bg-primary/20 p-1 text-[16px] font-[600] text-white transition duration-100 ease-out [--anchor-gap:var(--spacing-1)] focus:outline-none data-[closed]:scale-95 data-[closed]:opacity-0"
+          className="mt-4 w-52 origin-top-right rounded-xl border border-white/5 bg-primary/55 p-1 text-[16px] font-[600] text-white transition duration-100 ease-out [--anchor-gap:var(--spacing-1)] focus:outline-none data-[closed]:scale-95 data-[closed]:opacity-0"
         >
           <MenuItem>
             <button

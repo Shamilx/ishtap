@@ -5,8 +5,10 @@ import "react-modern-drawer/dist/index.css";
 import { jost } from "@/fonts/fonts";
 import { IoIosClose } from "react-icons/io";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 function Drawer({ isOpen, toggle }: { isOpen: boolean; toggle: () => void }) {
+  const router = useRouter();
   return (
     <>
       <ModernDrawer
@@ -24,7 +26,7 @@ function Drawer({ isOpen, toggle }: { isOpen: boolean; toggle: () => void }) {
             <IoIosClose size={32} color="white" />
           </button>
 
-          <button id="btn-explore">Explore</button>
+          <button id="btn-explore" onClick={() => router.push("/")}>Explore</button>
 
           <div className="w-full border border-gray-700 border-opacity-60"></div>
 

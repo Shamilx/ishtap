@@ -1,15 +1,13 @@
-"use client";
-
 import { jost } from "@/fonts/fonts";
 import Footer from "@/layout/Footer";
-import Header from "@/layout/Header";
+import HeaderHome from "@/layout/HeaderHome";
 import React from "react";
 
 function Page() {
   return (
     <div id="home">
       <div className="absolute w-full z-10">
-        <Header />
+        <HeaderHome />
       </div>
 
       <div id="main-content">

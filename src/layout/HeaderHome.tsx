@@ -13,7 +13,7 @@ const ClientSideDrawer = dynamic(() => import("./Drawer"), {
   ssr: false,
 });
 
-function Header() {
+function HeaderHome() {
   const [isOpen, setIsOpen] = useState(false);
   const toggleDrawer = () => {
     setIsOpen((prevState) => !prevState);
@@ -21,7 +21,7 @@ function Header() {
 
   return (
     <>
-      <header className="flex w-full items-center px-4 text-white sm:px-12">
+      <header className="flex w-full items-center px-8 text-white sm:px-12" id="headerhome">
         <Logo />
 
         <div className="ms-auto flex gap-6">
@@ -49,4 +49,4 @@ function Header() {
   );
 }
 
-export default Header;
+export default HeaderHome;

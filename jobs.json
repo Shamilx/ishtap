@@ -1,0 +1,1327 @@
+[
+    {
+        "id": 1,
+        "title": "Data Analyst",
+        "company": "AzData Analytics",
+        "location": "Gəncə, Azərbaycan",
+        "salary": 2500,
+        "currency": "AZN",
+        "job_type": "Part-time",
+        "experience_level": "Mid-level",
+        "posted_date": "2025-02-02",
+        "deadline": "2025-03-02",
+        "remote": false,
+        "skills_required": [
+            "SQL",
+            "React",
+            "Marketing",
+            "Excel"
+        ],
+        "education_required": "Bakalavr dərəcəsi - İT və ya Biznes",
+        "benefits": [
+            "Bonuslar",
+            "Uzaqdan işləmə",
+            "Yemək xərcləri"
+        ],
+        "contact_email": "hr@azdataanalytics.az",
+        "company_website": "https://azdataanalytics.az",
+        "number_of_vacancies": 2
+    },
+    {
+        "id": 2,
+        "title": "Maliyyə Analitiki",
+        "company": "Baku Finance Group",
+        "location": "Sumqayıt, Azərbaycan",
+        "salary": 3000,
+        "currency": "AZN",
+        "job_type": "Full-time",
+        "experience_level": "Senior-level",
+        "posted_date": "2025-02-03",
+        "deadline": "2025-03-03",
+        "remote": false,
+        "skills_required": [
+            "React",
+            "Marketing",
+            "Excel"
+        ],
+        "education_required": "Bakalavr dərəcəsi - İT və ya Biznes",
+        "benefits": [
+            "Uzaqdan işləmə",
+            "Yemək xərcləri"
+        ],
+        "contact_email": "hr@bakufinancegroup.az",
+        "company_website": "https://bakufinancegroup.az",
+        "number_of_vacancies": 3
+    },
+    {
+        "id": 3,
+        "title": "Rəqəmsal Marketinq Mütəxəssisi",
+        "company": "Azeri Digital Agency",
+        "location": "Şəki, Azərbaycan",
+        "salary": 3500,
+        "currency": "AZN",
+        "job_type": "Part-time",
+        "experience_level": "Entry-level",
+        "posted_date": "2025-02-04",
+        "deadline": "2025-03-04",
+        "remote": false,
+        "skills_required": [
+            "Marketing",
+            "Excel"
+        ],
+        "education_required": "Bakalavr dərəcəsi - İT və ya Biznes",
+        "benefits": [
+            "Yemək xərcləri"
+        ],
+        "contact_email": "hr@azeridigitalagency.az",
+        "company_website": "https://azeridigitalagency.az",
+        "number_of_vacancies": 1
+    },
+    {
+        "id": 4,
+        "title": "Satış Meneceri",
+        "company": "Caspian Trade LLC",
+        "location": "Lənkəran, Azərbaycan",
+        "salary": 4000,
+        "currency": "AZN",
+        "job_type": "Full-time",
+        "experience_level": "Mid-level",
+        "posted_date": "2025-02-05",
+        "deadline": "2025-03-05",
+        "remote": true,
+        "skills_required": [
+            "Excel"
+        ],
+        "education_required": "Bakalavr dərəcəsi - İT və ya Biznes",
+        "benefits": [
+            "Tibbi sığorta",
+            "Bonuslar",
+            "Uzaqdan işləmə",
+            "Yemək xərcləri"
+        ],
+        "contact_email": "hr@caspiantradellc.az",
+        "company_website": "https://caspiantradellc.az",
+        "number_of_vacancies": 2
+    },
+    {
+        "id": 5,
+        "title": "İnsan Resursları Meneceri",
+        "company": "HR Baku Consulting",
+        "location": "Bakı, Azərbaycan",
+        "salary": 2000,
+        "currency": "AZN",
+        "job_type": "Part-time",
+        "experience_level": "Senior-level",
+        "posted_date": "2025-02-06",
+        "deadline": "2025-03-06",
+        "remote": false,
+        "skills_required": [
+            "Python",
+            "SQL",
+            "React",
+            "Marketing",
+            "Excel"
+        ],
+        "education_required": "Bakalavr dərəcəsi - İT və ya Biznes",
+        "benefits": [
+            "Bonuslar",
+            "Uzaqdan işləmə",
+            "Yemək xərcləri"
+        ],
+        "contact_email": "hr@hrbakuconsulting.az",
+        "company_website": "https://hrbakuconsulting.az",
+        "number_of_vacancies": 3
+    },
+    {
+        "id": 6,
+        "title": "Mühasib",
+        "company": "Baku Tech Solutions",
+        "location": "Gəncə, Azərbaycan",
+        "salary": 2500,
+        "currency": "AZN",
+        "job_type": "Full-time",
+        "experience_level": "Entry-level",
+        "posted_date": "2025-02-07",
+        "deadline": "2025-03-07",
+        "remote": false,
+        "skills_required": [
+            "SQL",
+            "React",
+            "Marketing",
+            "Excel"
+        ],
+        "education_required": "Bakalavr dərəcəsi - İT və ya Biznes",
+        "benefits": [
+            "Uzaqdan işləmə",
+            "Yemək xərcləri"
+        ],
+        "contact_email": "hr@bakutechsolutions.az",
+        "company_website": "https://bakutechsolutions.az",
+        "number_of_vacancies": 1
+    },
+    {
+        "id": 7,
+        "title": "Frontend Developer",
+        "company": "AzData Analytics",
+        "location": "Sumqayıt, Azərbaycan",
+        "salary": 3000,
+        "currency": "AZN",
+        "job_type": "Part-time",
+        "experience_level": "Mid-level",
+        "posted_date": "2025-02-08",
+        "deadline": "2025-03-08",
+        "remote": false,
+        "skills_required": [
+            "React",
+            "Marketing",
+            "Excel"
+        ],
+        "education_required": "Bakalavr dərəcəsi - İT və ya Biznes",
+        "benefits": [
+            "Yemək xərcləri"
+        ],
+        "contact_email": "hr@azdataanalytics.az",
+        "company_website": "https://azdataanalytics.az",
+        "number_of_vacancies": 2
+    },
+    {
+        "id": 8,
+        "title": "Mobil Tətbiq Proqramçısı",
+        "company": "Baku Finance Group",
+        "location": "Şəki, Azərbaycan",
+        "salary": 3500,
+        "currency": "AZN",
+        "job_type": "Full-time",
+        "experience_level": "Senior-level",
+        "posted_date": "2025-02-09",
+        "deadline": "2025-03-09",
+        "remote": true,
+        "skills_required": [
+            "Marketing",
+            "Excel"
+        ],
+        "education_required": "Bakalavr dərəcəsi - İT və ya Biznes",
+        "benefits": [
+            "Tibbi sığorta",
+            "Bonuslar",
+            "Uzaqdan işləmə",
+            "Yemək xərcləri"
+        ],
+        "contact_email": "hr@bakufinancegroup.az",
+        "company_website": "https://bakufinancegroup.az",
+        "number_of_vacancies": 3
+    },
+    {
+        "id": 9,
+        "title": "Sistem Administratoru",
+        "company": "Azeri Digital Agency",
+        "location": "Lənkəran, Azərbaycan",
+        "salary": 4000,
+        "currency": "AZN",
+        "job_type": "Part-time",
+        "experience_level": "Entry-level",
+        "posted_date": "2025-02-10",
+        "deadline": "2025-03-10",
+        "remote": false,
+        "skills_required": [
+            "Excel"
+        ],
+        "education_required": "Bakalavr dərəcəsi - İT və ya Biznes",
+        "benefits": [
+            "Bonuslar",
+            "Uzaqdan işləmə",
+            "Yemək xərcləri"
+        ],
+        "contact_email": "hr@azeridigitalagency.az",
+        "company_website": "https://azeridigitalagency.az",
+        "number_of_vacancies": 1
+    },
+    {
+        "id": 10,
+        "title": "Full-Stack Developer",
+        "company": "Caspian Trade LLC",
+        "location": "Bakı, Azərbaycan",
+        "salary": 2000,
+        "currency": "AZN",
+        "job_type": "Full-time",
+        "experience_level": "Mid-level",
+        "posted_date": "2025-02-11",
+        "deadline": "2025-03-11",
+        "remote": false,
+        "skills_required": [
+            "Python",
+            "SQL",
+            "React",
+            "Marketing",
+            "Excel"
+        ],
+        "education_required": "Bakalavr dərəcəsi - İT və ya Biznes",
+        "benefits": [
+            "Uzaqdan işləmə",
+            "Yemək xərcləri"
+        ],
+        "contact_email": "hr@caspiantradellc.az",
+        "company_website": "https://caspiantradellc.az",
+        "number_of_vacancies": 2
+    },
+    {
+        "id": 11,
+        "title": "Data Analyst",
+        "company": "HR Baku Consulting",
+        "location": "Gəncə, Azərbaycan",
+        "salary": 2500,
+        "currency": "AZN",
+        "job_type": "Part-time",
+        "experience_level": "Senior-level",
+        "posted_date": "2025-02-12",
+        "deadline": "2025-03-12",
+        "remote": false,
+        "skills_required": [
+            "SQL",
+            "React",
+            "Marketing",
+            "Excel"
+        ],
+        "education_required": "Bakalavr dərəcəsi - İT və ya Biznes",
+        "benefits": [
+            "Yemək xərcləri"
+        ],
+        "contact_email": "hr@hrbakuconsulting.az",
+        "company_website": "https://hrbakuconsulting.az",
+        "number_of_vacancies": 3
+    },
+    {
+        "id": 12,
+        "title": "Maliyyə Analitiki",
+        "company": "Baku Tech Solutions",
+        "location": "Sumqayıt, Azərbaycan",
+        "salary": 3000,
+        "currency": "AZN",
+        "job_type": "Full-time",
+        "experience_level": "Entry-level",
+        "posted_date": "2025-02-13",
+        "deadline": "2025-03-13",
+        "remote": true,
+        "skills_required": [
+            "React",
+            "Marketing",
+            "Excel"
+        ],
+        "education_required": "Bakalavr dərəcəsi - İT və ya Biznes",
+        "benefits": [
+            "Tibbi sığorta",
+            "Bonuslar",
+            "Uzaqdan işləmə",
+            "Yemək xərcləri"
+        ],
+        "contact_email": "hr@bakutechsolutions.az",
+        "company_website": "https://bakutechsolutions.az",
+        "number_of_vacancies": 1
+    },
+    {
+        "id": 13,
+        "title": "Rəqəmsal Marketinq Mütəxəssisi",
+        "company": "AzData Analytics",
+        "location": "Şəki, Azərbaycan",
+        "salary": 3500,
+        "currency": "AZN",
+        "job_type": "Part-time",
+        "experience_level": "Mid-level",
+        "posted_date": "2025-02-14",
+        "deadline": "2025-03-14",
+        "remote": false,
+        "skills_required": [
+            "Marketing",
+            "Excel"
+        ],
+        "education_required": "Bakalavr dərəcəsi - İT və ya Biznes",
+        "benefits": [
+            "Bonuslar",
+            "Uzaqdan işləmə",
+            "Yemək xərcləri"
+        ],
+        "contact_email": "hr@azdataanalytics.az",
+        "company_website": "https://azdataanalytics.az",
+        "number_of_vacancies": 2
+    },
+    {
+        "id": 14,
+        "title": "Satış Meneceri",
+        "company": "Baku Finance Group",
+        "location": "Lənkəran, Azərbaycan",
+        "salary": 4000,
+        "currency": "AZN",
+        "job_type": "Full-time",
+        "experience_level": "Senior-level",
+        "posted_date": "2025-02-15",
+        "deadline": "2025-03-15",
+        "remote": false,
+        "skills_required": [
+            "Excel"
+        ],
+        "education_required": "Bakalavr dərəcəsi - İT və ya Biznes",
+        "benefits": [
+            "Uzaqdan işləmə",
+            "Yemək xərcləri"
+        ],
+        "contact_email": "hr@bakufinancegroup.az",
+        "company_website": "https://bakufinancegroup.az",
+        "number_of_vacancies": 3
+    },
+    {
+        "id": 15,
+        "title": "İnsan Resursları Meneceri",
+        "company": "Azeri Digital Agency",
+        "location": "Bakı, Azərbaycan",
+        "salary": 2000,
+        "currency": "AZN",
+        "job_type": "Part-time",
+        "experience_level": "Entry-level",
+        "posted_date": "2025-02-16",
+        "deadline": "2025-03-16",
+        "remote": false,
+        "skills_required": [
+            "Python",
+            "SQL",
+            "React",
+            "Marketing",
+            "Excel"
+        ],
+        "education_required": "Bakalavr dərəcəsi - İT və ya Biznes",
+        "benefits": [
+            "Yemək xərcləri"
+        ],
+        "contact_email": "hr@azeridigitalagency.az",
+        "company_website": "https://azeridigitalagency.az",
+        "number_of_vacancies": 1
+    },
+    {
+        "id": 16,
+        "title": "Mühasib",
+        "company": "Caspian Trade LLC",
+        "location": "Gəncə, Azərbaycan",
+        "salary": 2500,
+        "currency": "AZN",
+        "job_type": "Full-time",
+        "experience_level": "Mid-level",
+        "posted_date": "2025-02-17",
+        "deadline": "2025-03-17",
+        "remote": true,
+        "skills_required": [
+            "SQL",
+            "React",
+            "Marketing",
+            "Excel"
+        ],
+        "education_required": "Bakalavr dərəcəsi - İT və ya Biznes",
+        "benefits": [
+            "Tibbi sığorta",
+            "Bonuslar",
+            "Uzaqdan işləmə",
+            "Yemək xərcləri"
+        ],
+        "contact_email": "hr@caspiantradellc.az",
+        "company_website": "https://caspiantradellc.az",
+        "number_of_vacancies": 2
+    },
+    {
+        "id": 17,
+        "title": "Frontend Developer",
+        "company": "HR Baku Consulting",
+        "location": "Sumqayıt, Azərbaycan",
+        "salary": 3000,
+        "currency": "AZN",
+        "job_type": "Part-time",
+        "experience_level": "Senior-level",
+        "posted_date": "2025-02-18",
+        "deadline": "2025-03-18",
+        "remote": false,
+        "skills_required": [
+            "React",
+            "Marketing",
+            "Excel"
+        ],
+        "education_required": "Bakalavr dərəcəsi - İT və ya Biznes",
+        "benefits": [
+            "Bonuslar",
+            "Uzaqdan işləmə",
+            "Yemək xərcləri"
+        ],
+        "contact_email": "hr@hrbakuconsulting.az",
+        "company_website": "https://hrbakuconsulting.az",
+        "number_of_vacancies": 3
+    },
+    {
+        "id": 18,
+        "title": "Mobil Tətbiq Proqramçısı",
+        "company": "Baku Tech Solutions",
+        "location": "Şəki, Azərbaycan",
+        "salary": 3500,
+        "currency": "AZN",
+        "job_type": "Full-time",
+        "experience_level": "Entry-level",
+        "posted_date": "2025-02-19",
+        "deadline": "2025-03-19",
+        "remote": false,
+        "skills_required": [
+            "Marketing",
+            "Excel"
+        ],
+        "education_required": "Bakalavr dərəcəsi - İT və ya Biznes",
+        "benefits": [
+            "Uzaqdan işləmə",
+            "Yemək xərcləri"
+        ],
+        "contact_email": "hr@bakutechsolutions.az",
+        "company_website": "https://bakutechsolutions.az",
+        "number_of_vacancies": 1
+    },
+    {
+        "id": 19,
+        "title": "Sistem Administratoru",
+        "company": "AzData Analytics",
+        "location": "Lənkəran, Azərbaycan",
+        "salary": 4000,
+        "currency": "AZN",
+        "job_type": "Part-time",
+        "experience_level": "Mid-level",
+        "posted_date": "2025-02-20",
+        "deadline": "2025-03-20",
+        "remote": false,
+        "skills_required": [
+            "Excel"
+        ],
+        "education_required": "Bakalavr dərəcəsi - İT və ya Biznes",
+        "benefits": [
+            "Yemək xərcləri"
+        ],
+        "contact_email": "hr@azdataanalytics.az",
+        "company_website": "https://azdataanalytics.az",
+        "number_of_vacancies": 2
+    },
+    {
+        "id": 20,
+        "title": "Full-Stack Developer",
+        "company": "Baku Finance Group",
+        "location": "Bakı, Azərbaycan",
+        "salary": 2000,
+        "currency": "AZN",
+        "job_type": "Full-time",
+        "experience_level": "Senior-level",
+        "posted_date": "2025-02-21",
+        "deadline": "2025-03-21",
+        "remote": true,
+        "skills_required": [
+            "Python",
+            "SQL",
+            "React",
+            "Marketing",
+            "Excel"
+        ],
+        "education_required": "Bakalavr dərəcəsi - İT və ya Biznes",
+        "benefits": [
+            "Tibbi sığorta",
+            "Bonuslar",
+            "Uzaqdan işləmə",
+            "Yemək xərcləri"
+        ],
+        "contact_email": "hr@bakufinancegroup.az",
+        "company_website": "https://bakufinancegroup.az",
+        "number_of_vacancies": 3
+    },
+    {
+        "id": 21,
+        "title": "Data Analyst",
+        "company": "Azeri Digital Agency",
+        "location": "Gəncə, Azərbaycan",
+        "salary": 2500,
+        "currency": "AZN",
+        "job_type": "Part-time",
+        "experience_level": "Entry-level",
+        "posted_date": "2025-02-22",
+        "deadline": "2025-03-22",
+        "remote": false,
+        "skills_required": [
+            "SQL",
+            "React",
+            "Marketing",
+            "Excel"
+        ],
+        "education_required": "Bakalavr dərəcəsi - İT və ya Biznes",
+        "benefits": [
+            "Bonuslar",
+            "Uzaqdan işləmə",
+            "Yemək xərcləri"
+        ],
+        "contact_email": "hr@azeridigitalagency.az",
+        "company_website": "https://azeridigitalagency.az",
+        "number_of_vacancies": 1
+    },
+    {
+        "id": 22,
+        "title": "Maliyyə Analitiki",
+        "company": "Caspian Trade LLC",
+        "location": "Sumqayıt, Azərbaycan",
+        "salary": 3000,
+        "currency": "AZN",
+        "job_type": "Full-time",
+        "experience_level": "Mid-level",
+        "posted_date": "2025-02-23",
+        "deadline": "2025-03-23",
+        "remote": false,
+        "skills_required": [
+            "React",
+            "Marketing",
+            "Excel"
+        ],
+        "education_required": "Bakalavr dərəcəsi - İT və ya Biznes",
+        "benefits": [
+            "Uzaqdan işləmə",
+            "Yemək xərcləri"
+        ],
+        "contact_email": "hr@caspiantradellc.az",
+        "company_website": "https://caspiantradellc.az",
+        "number_of_vacancies": 2
+    },
+    {
+        "id": 23,
+        "title": "Rəqəmsal Marketinq Mütəxəssisi",
+        "company": "HR Baku Consulting",
+        "location": "Şəki, Azərbaycan",
+        "salary": 3500,
+        "currency": "AZN",
+        "job_type": "Part-time",
+        "experience_level": "Senior-level",
+        "posted_date": "2025-02-24",
+        "deadline": "2025-03-24",
+        "remote": false,
+        "skills_required": [
+            "Marketing",
+            "Excel"
+        ],
+        "education_required": "Bakalavr dərəcəsi - İT və ya Biznes",
+        "benefits": [
+            "Yemək xərcləri"
+        ],
+        "contact_email": "hr@hrbakuconsulting.az",
+        "company_website": "https://hrbakuconsulting.az",
+        "number_of_vacancies": 3
+    },
+    {
+        "id": 24,
+        "title": "Satış Meneceri",
+        "company": "Baku Tech Solutions",
+        "location": "Lənkəran, Azərbaycan",
+        "salary": 4000,
+        "currency": "AZN",
+        "job_type": "Full-time",
+        "experience_level": "Entry-level",
+        "posted_date": "2025-02-25",
+        "deadline": "2025-03-25",
+        "remote": true,
+        "skills_required": [
+            "Excel"
+        ],
+        "education_required": "Bakalavr dərəcəsi - İT və ya Biznes",
+        "benefits": [
+            "Tibbi sığorta",
+            "Bonuslar",
+            "Uzaqdan işləmə",
+            "Yemək xərcləri"
+        ],
+        "contact_email": "hr@bakutechsolutions.az",
+        "company_website": "https://bakutechsolutions.az",
+        "number_of_vacancies": 1
+    },
+    {
+        "id": 25,
+        "title": "İnsan Resursları Meneceri",
+        "company": "AzData Analytics",
+        "location": "Bakı, Azərbaycan",
+        "salary": 2000,
+        "currency": "AZN",
+        "job_type": "Part-time",
+        "experience_level": "Mid-level",
+        "posted_date": "2025-02-26",
+        "deadline": "2025-03-26",
+        "remote": false,
+        "skills_required": [
+            "Python",
+            "SQL",
+            "React",
+            "Marketing",
+            "Excel"
+        ],
+        "education_required": "Bakalavr dərəcəsi - İT və ya Biznes",
+        "benefits": [
+            "Bonuslar",
+            "Uzaqdan işləmə",
+            "Yemək xərcləri"
+        ],
+        "contact_email": "hr@azdataanalytics.az",
+        "company_website": "https://azdataanalytics.az",
+        "number_of_vacancies": 2
+    },
+    {
+        "id": 26,
+        "title": "Mühasib",
+        "company": "Baku Finance Group",
+        "location": "Gəncə, Azərbaycan",
+        "salary": 2500,
+        "currency": "AZN",
+        "job_type": "Full-time",
+        "experience_level": "Senior-level",
+        "posted_date": "2025-02-27",
+        "deadline": "2025-03-27",
+        "remote": false,
+        "skills_required": [
+            "SQL",
+            "React",
+            "Marketing",
+            "Excel"
+        ],
+        "education_required": "Bakalavr dərəcəsi - İT və ya Biznes",
+        "benefits": [
+            "Uzaqdan işləmə",
+            "Yemək xərcləri"
+        ],
+        "contact_email": "hr@bakufinancegroup.az",
+        "company_website": "https://bakufinancegroup.az",
+        "number_of_vacancies": 3
+    },
+    {
+        "id": 27,
+        "title": "Frontend Developer",
+        "company": "Azeri Digital Agency",
+        "location": "Sumqayıt, Azərbaycan",
+        "salary": 3000,
+        "currency": "AZN",
+        "job_type": "Part-time",
+        "experience_level": "Entry-level",
+        "posted_date": "2025-02-28",
+        "deadline": "2025-03-28",
+        "remote": false,
+        "skills_required": [
+            "React",
+            "Marketing",
+            "Excel"
+        ],
+        "education_required": "Bakalavr dərəcəsi - İT və ya Biznes",
+        "benefits": [
+            "Yemək xərcləri"
+        ],
+        "contact_email": "hr@azeridigitalagency.az",
+        "company_website": "https://azeridigitalagency.az",
+        "number_of_vacancies": 1
+    },
+    {
+        "id": 28,
+        "title": "Mobil Tətbiq Proqramçısı",
+        "company": "Caspian Trade LLC",
+        "location": "Şəki, Azərbaycan",
+        "salary": 3500,
+        "currency": "AZN",
+        "job_type": "Full-time",
+        "experience_level": "Mid-level",
+        "posted_date": "2025-02-01",
+        "deadline": "2025-03-01",
+        "remote": true,
+        "skills_required": [
+            "Marketing",
+            "Excel"
+        ],
+        "education_required": "Bakalavr dərəcəsi - İT və ya Biznes",
+        "benefits": [
+            "Tibbi sığorta",
+            "Bonuslar",
+            "Uzaqdan işləmə",
+            "Yemək xərcləri"
+        ],
+        "contact_email": "hr@caspiantradellc.az",
+        "company_website": "https://caspiantradellc.az",
+        "number_of_vacancies": 2
+    },
+    {
+        "id": 29,
+        "title": "Sistem Administratoru",
+        "company": "HR Baku Consulting",
+        "location": "Lənkəran, Azərbaycan",
+        "salary": 4000,
+        "currency": "AZN",
+        "job_type": "Part-time",
+        "experience_level": "Senior-level",
+        "posted_date": "2025-02-02",
+        "deadline": "2025-03-02",
+        "remote": false,
+        "skills_required": [
+            "Excel"
+        ],
+        "education_required": "Bakalavr dərəcəsi - İT və ya Biznes",
+        "benefits": [
+            "Bonuslar",
+            "Uzaqdan işləmə",
+            "Yemək xərcləri"
+        ],
+        "contact_email": "hr@hrbakuconsulting.az",
+        "company_website": "https://hrbakuconsulting.az",
+        "number_of_vacancies": 3
+    },
+    {
+        "id": 30,
+        "title": "Full-Stack Developer",
+        "company": "Baku Tech Solutions",
+        "location": "Bakı, Azərbaycan",
+        "salary": 2000,
+        "currency": "AZN",
+        "job_type": "Full-time",
+        "experience_level": "Entry-level",
+        "posted_date": "2025-02-03",
+        "deadline": "2025-03-03",
+        "remote": false,
+        "skills_required": [
+            "Python",
+            "SQL",
+            "React",
+            "Marketing",
+            "Excel"
+        ],
+        "education_required": "Bakalavr dərəcəsi - İT və ya Biznes",
+        "benefits": [
+            "Uzaqdan işləmə",
+            "Yemək xərcləri"
+        ],
+        "contact_email": "hr@bakutechsolutions.az",
+        "company_website": "https://bakutechsolutions.az",
+        "number_of_vacancies": 1
+    },
+    {
+        "id": 31,
+        "title": "Data Analyst",
+        "company": "AzData Analytics",
+        "location": "Gəncə, Azərbaycan",
+        "salary": 2500,
+        "currency": "AZN",
+        "job_type": "Part-time",
+        "experience_level": "Mid-level",
+        "posted_date": "2025-02-04",
+        "deadline": "2025-03-04",
+        "remote": false,
+        "skills_required": [
+            "SQL",
+            "React",
+            "Marketing",
+            "Excel"
+        ],
+        "education_required": "Bakalavr dərəcəsi - İT və ya Biznes",
+        "benefits": [
+            "Yemək xərcləri"
+        ],
+        "contact_email": "hr@azdataanalytics.az",
+        "company_website": "https://azdataanalytics.az",
+        "number_of_vacancies": 2
+    },
+    {
+        "id": 32,
+        "title": "Maliyyə Analitiki",
+        "company": "Baku Finance Group",
+        "location": "Sumqayıt, Azərbaycan",
+        "salary": 3000,
+        "currency": "AZN",
+        "job_type": "Full-time",
+        "experience_level": "Senior-level",
+        "posted_date": "2025-02-05",
+        "deadline": "2025-03-05",
+        "remote": true,
+        "skills_required": [
+            "React",
+            "Marketing",
+            "Excel"
+        ],
+        "education_required": "Bakalavr dərəcəsi - İT və ya Biznes",
+        "benefits": [
+            "Tibbi sığorta",
+            "Bonuslar",
+            "Uzaqdan işləmə",
+            "Yemək xərcləri"
+        ],
+        "contact_email": "hr@bakufinancegroup.az",
+        "company_website": "https://bakufinancegroup.az",
+        "number_of_vacancies": 3
+    },
+    {
+        "id": 33,
+        "title": "Rəqəmsal Marketinq Mütəxəssisi",
+        "company": "Azeri Digital Agency",
+        "location": "Şəki, Azərbaycan",
+        "salary": 3500,
+        "currency": "AZN",
+        "job_type": "Part-time",
+        "experience_level": "Entry-level",
+        "posted_date": "2025-02-06",
+        "deadline": "2025-03-06",
+        "remote": false,
+        "skills_required": [
+            "Marketing",
+            "Excel"
+        ],
+        "education_required": "Bakalavr dərəcəsi - İT və ya Biznes",
+        "benefits": [
+            "Bonuslar",
+            "Uzaqdan işləmə",
+            "Yemək xərcləri"
+        ],
+        "contact_email": "hr@azeridigitalagency.az",
+        "company_website": "https://azeridigitalagency.az",
+        "number_of_vacancies": 1
+    },
+    {
+        "id": 34,
+        "title": "Satış Meneceri",
+        "company": "Caspian Trade LLC",
+        "location": "Lənkəran, Azərbaycan",
+        "salary": 4000,
+        "currency": "AZN",
+        "job_type": "Full-time",
+        "experience_level": "Mid-level",
+        "posted_date": "2025-02-07",
+        "deadline": "2025-03-07",
+        "remote": false,
+        "skills_required": [
+            "Excel"
+        ],
+        "education_required": "Bakalavr dərəcəsi - İT və ya Biznes",
+        "benefits": [
+            "Uzaqdan işləmə",
+            "Yemək xərcləri"
+        ],
+        "contact_email": "hr@caspiantradellc.az",
+        "company_website": "https://caspiantradellc.az",
+        "number_of_vacancies": 2
+    },
+    {
+        "id": 35,
+        "title": "İnsan Resursları Meneceri",
+        "company": "HR Baku Consulting",
+        "location": "Bakı, Azərbaycan",
+        "salary": 2000,
+        "currency": "AZN",
+        "job_type": "Part-time",
+        "experience_level": "Senior-level",
+        "posted_date": "2025-02-08",
+        "deadline": "2025-03-08",
+        "remote": false,
+        "skills_required": [
+            "Python",
+            "SQL",
+            "React",
+            "Marketing",
+            "Excel"
+        ],
+        "education_required": "Bakalavr dərəcəsi - İT və ya Biznes",
+        "benefits": [
+            "Yemək xərcləri"
+        ],
+        "contact_email": "hr@hrbakuconsulting.az",
+        "company_website": "https://hrbakuconsulting.az",
+        "number_of_vacancies": 3
+    },
+    {
+        "id": 36,
+        "title": "Mühasib",
+        "company": "Baku Tech Solutions",
+        "location": "Gəncə, Azərbaycan",
+        "salary": 2500,
+        "currency": "AZN",
+        "job_type": "Full-time",
+        "experience_level": "Entry-level",
+        "posted_date": "2025-02-09",
+        "deadline": "2025-03-09",
+        "remote": true,
+        "skills_required": [
+            "SQL",
+            "React",
+            "Marketing",
+            "Excel"
+        ],
+        "education_required": "Bakalavr dərəcəsi - İT və ya Biznes",
+        "benefits": [
+            "Tibbi sığorta",
+            "Bonuslar",
+            "Uzaqdan işləmə",
+            "Yemək xərcləri"
+        ],
+        "contact_email": "hr@bakutechsolutions.az",
+        "company_website": "https://bakutechsolutions.az",
+        "number_of_vacancies": 1
+    },
+    {
+        "id": 37,
+        "title": "Frontend Developer",
+        "company": "AzData Analytics",
+        "location": "Sumqayıt, Azərbaycan",
+        "salary": 3000,
+        "currency": "AZN",
+        "job_type": "Part-time",
+        "experience_level": "Mid-level",
+        "posted_date": "2025-02-10",
+        "deadline": "2025-03-10",
+        "remote": false,
+        "skills_required": [
+            "React",
+            "Marketing",
+            "Excel"
+        ],
+        "education_required": "Bakalavr dərəcəsi - İT və ya Biznes",
+        "benefits": [
+            "Bonuslar",
+            "Uzaqdan işləmə",
+            "Yemək xərcləri"
+        ],
+        "contact_email": "hr@azdataanalytics.az",
+        "company_website": "https://azdataanalytics.az",
+        "number_of_vacancies": 2
+    },
+    {
+        "id": 38,
+        "title": "Mobil Tətbiq Proqramçısı",
+        "company": "Baku Finance Group",
+        "location": "Şəki, Azərbaycan",
+        "salary": 3500,
+        "currency": "AZN",
+        "job_type": "Full-time",
+        "experience_level": "Senior-level",
+        "posted_date": "2025-02-11",
+        "deadline": "2025-03-11",
+        "remote": false,
+        "skills_required": [
+            "Marketing",
+            "Excel"
+        ],
+        "education_required": "Bakalavr dərəcəsi - İT və ya Biznes",
+        "benefits": [
+            "Uzaqdan işləmə",
+            "Yemək xərcləri"
+        ],
+        "contact_email": "hr@bakufinancegroup.az",
+        "company_website": "https://bakufinancegroup.az",
+        "number_of_vacancies": 3
+    },
+    {
+        "id": 39,
+        "title": "Sistem Administratoru",
+        "company": "Azeri Digital Agency",
+        "location": "Lənkəran, Azərbaycan",
+        "salary": 4000,
+        "currency": "AZN",
+        "job_type": "Part-time",
+        "experience_level": "Entry-level",
+        "posted_date": "2025-02-12",
+        "deadline": "2025-03-12",
+        "remote": false,
+        "skills_required": [
+            "Excel"
+        ],
+        "education_required": "Bakalavr dərəcəsi - İT və ya Biznes",
+        "benefits": [
+            "Yemək xərcləri"
+        ],
+        "contact_email": "hr@azeridigitalagency.az",
+        "company_website": "https://azeridigitalagency.az",
+        "number_of_vacancies": 1
+    },
+    {
+        "id": 40,
+        "title": "Full-Stack Developer",
+        "company": "Caspian Trade LLC",
+        "location": "Bakı, Azərbaycan",
+        "salary": 2000,
+        "currency": "AZN",
+        "job_type": "Full-time",
+        "experience_level": "Mid-level",
+        "posted_date": "2025-02-13",
+        "deadline": "2025-03-13",
+        "remote": true,
+        "skills_required": [
+            "Python",
+            "SQL",
+            "React",
+            "Marketing",
+            "Excel"
+        ],
+        "education_required": "Bakalavr dərəcəsi - İT və ya Biznes",
+        "benefits": [
+            "Tibbi sığorta",
+            "Bonuslar",
+            "Uzaqdan işləmə",
+            "Yemək xərcləri"
+        ],
+        "contact_email": "hr@caspiantradellc.az",
+        "company_website": "https://caspiantradellc.az",
+        "number_of_vacancies": 2
+    },
+    {
+        "id": 41,
+        "title": "Data Analyst",
+        "company": "HR Baku Consulting",
+        "location": "Gəncə, Azərbaycan",
+        "salary": 2500,
+        "currency": "AZN",
+        "job_type": "Part-time",
+        "experience_level": "Senior-level",
+        "posted_date": "2025-02-14",
+        "deadline": "2025-03-14",
+        "remote": false,
+        "skills_required": [
+            "SQL",
+            "React",
+            "Marketing",
+            "Excel"
+        ],
+        "education_required": "Bakalavr dərəcəsi - İT və ya Biznes",
+        "benefits": [
+            "Bonuslar",
+            "Uzaqdan işləmə",
+            "Yemək xərcləri"
+        ],
+        "contact_email": "hr@hrbakuconsulting.az",
+        "company_website": "https://hrbakuconsulting.az",
+        "number_of_vacancies": 3
+    },
+    {
+        "id": 42,
+        "title": "Maliyyə Analitiki",
+        "company": "Baku Tech Solutions",
+        "location": "Sumqayıt, Azərbaycan",
+        "salary": 3000,
+        "currency": "AZN",
+        "job_type": "Full-time",
+        "experience_level": "Entry-level",
+        "posted_date": "2025-02-15",
+        "deadline": "2025-03-15",
+        "remote": false,
+        "skills_required": [
+            "React",
+            "Marketing",
+            "Excel"
+        ],
+        "education_required": "Bakalavr dərəcəsi - İT və ya Biznes",
+        "benefits": [
+            "Uzaqdan işləmə",
+            "Yemək xərcləri"
+        ],
+        "contact_email": "hr@bakutechsolutions.az",
+        "company_website": "https://bakutechsolutions.az",
+        "number_of_vacancies": 1
+    },
+    {
+        "id": 43,
+        "title": "Rəqəmsal Marketinq Mütəxəssisi",
+        "company": "AzData Analytics",
+        "location": "Şəki, Azərbaycan",
+        "salary": 3500,
+        "currency": "AZN",
+        "job_type": "Part-time",
+        "experience_level": "Mid-level",
+        "posted_date": "2025-02-16",
+        "deadline": "2025-03-16",
+        "remote": false,
+        "skills_required": [
+            "Marketing",
+            "Excel"
+        ],
+        "education_required": "Bakalavr dərəcəsi - İT və ya Biznes",
+        "benefits": [
+            "Yemək xərcləri"
+        ],
+        "contact_email": "hr@azdataanalytics.az",
+        "company_website": "https://azdataanalytics.az",
+        "number_of_vacancies": 2
+    },
+    {
+        "id": 44,
+        "title": "Satış Meneceri",
+        "company": "Baku Finance Group",
+        "location": "Lənkəran, Azərbaycan",
+        "salary": 4000,
+        "currency": "AZN",
+        "job_type": "Full-time",
+        "experience_level": "Senior-level",
+        "posted_date": "2025-02-17",
+        "deadline": "2025-03-17",
+        "remote": true,
+        "skills_required": [
+            "Excel"
+        ],
+        "education_required": "Bakalavr dərəcəsi - İT və ya Biznes",
+        "benefits": [
+            "Tibbi sığorta",
+            "Bonuslar",
+            "Uzaqdan işləmə",
+            "Yemək xərcləri"
+        ],
+        "contact_email": "hr@bakufinancegroup.az",
+        "company_website": "https://bakufinancegroup.az",
+        "number_of_vacancies": 3
+    },
+    {
+        "id": 45,
+        "title": "İnsan Resursları Meneceri",
+        "company": "Azeri Digital Agency",
+        "location": "Bakı, Azərbaycan",
+        "salary": 2000,
+        "currency": "AZN",
+        "job_type": "Part-time",
+        "experience_level": "Entry-level",
+        "posted_date": "2025-02-18",
+        "deadline": "2025-03-18",
+        "remote": false,
+        "skills_required": [
+            "Python",
+            "SQL",
+            "React",
+            "Marketing",
+            "Excel"
+        ],
+        "education_required": "Bakalavr dərəcəsi - İT və ya Biznes",
+        "benefits": [
+            "Bonuslar",
+            "Uzaqdan işləmə",
+            "Yemək xərcləri"
+        ],
+        "contact_email": "hr@azeridigitalagency.az",
+        "company_website": "https://azeridigitalagency.az",
+        "number_of_vacancies": 1
+    },
+    {
+        "id": 46,
+        "title": "Mühasib",
+        "company": "Caspian Trade LLC",
+        "location": "Gəncə, Azərbaycan",
+        "salary": 2500,
+        "currency": "AZN",
+        "job_type": "Full-time",
+        "experience_level": "Mid-level",
+        "posted_date": "2025-02-19",
+        "deadline": "2025-03-19",
+        "remote": false,
+        "skills_required": [
+            "SQL",
+            "React",
+            "Marketing",
+            "Excel"
+        ],
+        "education_required": "Bakalavr dərəcəsi - İT və ya Biznes",
+        "benefits": [
+            "Uzaqdan işləmə",
+            "Yemək xərcləri"
+        ],
+        "contact_email": "hr@caspiantradellc.az",
+        "company_website": "https://caspiantradellc.az",
+        "number_of_vacancies": 2
+    },
+    {
+        "id": 47,
+        "title": "Frontend Developer",
+        "company": "HR Baku Consulting",
+        "location": "Sumqayıt, Azərbaycan",
+        "salary": 3000,
+        "currency": "AZN",
+        "job_type": "Part-time",
+        "experience_level": "Senior-level",
+        "posted_date": "2025-02-20",
+        "deadline": "2025-03-20",
+        "remote": false,
+        "skills_required": [
+            "React",
+            "Marketing",
+            "Excel"
+        ],
+        "education_required": "Bakalavr dərəcəsi - İT və ya Biznes",
+        "benefits": [
+            "Yemək xərcləri"
+        ],
+        "contact_email": "hr@hrbakuconsulting.az",
+        "company_website": "https://hrbakuconsulting.az",
+        "number_of_vacancies": 3
+    },
+    {
+        "id": 48,
+        "title": "Mobil Tətbiq Proqramçısı",
+        "company": "Baku Tech Solutions",
+        "location": "Şəki, Azərbaycan",
+        "salary": 3500,
+        "currency": "AZN",
+        "job_type": "Full-time",
+        "experience_level": "Entry-level",
+        "posted_date": "2025-02-21",
+        "deadline": "2025-03-21",
+        "remote": true,
+        "skills_required": [
+            "Marketing",
+            "Excel"
+        ],
+        "education_required": "Bakalavr dərəcəsi - İT və ya Biznes",
+        "benefits": [
+            "Tibbi sığorta",
+            "Bonuslar",
+            "Uzaqdan işləmə",
+            "Yemək xərcləri"
+        ],
+        "contact_email": "hr@bakutechsolutions.az",
+        "company_website": "https://bakutechsolutions.az",
+        "number_of_vacancies": 1
+    },
+    {
+        "id": 49,
+        "title": "Sistem Administratoru",
+        "company": "AzData Analytics",
+        "location": "Lənkəran, Azərbaycan",
+        "salary": 4000,
+        "currency": "AZN",
+        "job_type": "Part-time",
+        "experience_level": "Mid-level",
+        "posted_date": "2025-02-22",
+        "deadline": "2025-03-22",
+        "remote": false,
+        "skills_required": [
+            "Excel"
+        ],
+        "education_required": "Bakalavr dərəcəsi - İT və ya Biznes",
+        "benefits": [
+            "Bonuslar",
+            "Uzaqdan işləmə",
+            "Yemək xərcləri"
+        ],
+        "contact_email": "hr@azdataanalytics.az",
+        "company_website": "https://azdataanalytics.az",
+        "number_of_vacancies": 2
+    },
+    {
+        "id": 50,
+        "title": "Full-Stack Developer",
+        "company": "Baku Finance Group",
+        "location": "Bakı, Azərbaycan",
+        "salary": 2000,
+        "currency": "AZN",
+        "job_type": "Full-time",
+        "experience_level": "Senior-level",
+        "posted_date": "2025-02-23",
+        "deadline": "2025-03-23",
+        "remote": false,
+        "skills_required": [
+            "Python",
+            "SQL",
+            "React",
+            "Marketing",
+            "Excel"
+        ],
+        "education_required": "Bakalavr dərəcəsi - İT və ya Biznes",
+        "benefits": [
+            "Uzaqdan işləmə",
+            "Yemək xərcləri"
+        ],
+        "contact_email": "hr@bakufinancegroup.az",
+        "company_website": "https://bakufinancegroup.az",
+        "number_of_vacancies": 3
+    }
+]

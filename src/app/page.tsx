@@ -1,8 +1,16 @@
-import { redirect } from "next/navigation";
+import HeaderMain from "@/layout/HeaderMain";
 import React from "react";
 
 function Page() {
-  return <div></div>;
+  return (
+    <div>
+      <HeaderMain />
+
+      <div id="main-content">
+        
+      </div>
+    </div>
+  );
 }
 
 export default Page;
