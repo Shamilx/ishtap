@@ -32,18 +32,12 @@
   }
 
   #button-login {
-    background-color: #f5efe7;
     border-radius: 50px;
     width: 48px;
     height: 46px;
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: all ease .3s;
-
-    &:hover {
-      background-color: #fff;
-    }
   }
 }
 

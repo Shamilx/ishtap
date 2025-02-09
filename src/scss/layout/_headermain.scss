@@ -1,23 +1,25 @@
 #headermain {
   min-height: 120px;
 
-  #button-add {
-    background-color: #213555;
+  #button-change-theme {
     border-radius: 50px;
     width: 48px;
     height: 46px;
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: all ease 0.3s;
+  }
 
-    &:hover {
-      background-color: #142c54;
-    }
+  #button-add {
+    border-radius: 50px;
+    width: 48px;
+    height: 46px;
+    align-items: center;
+    justify-content: center;
+    transition: all ease 0.3s;
   }
 
   #button-login {
-    background-color: #213555;
     border-radius: 50px;
     width: 48px;
     height: 46px;
@@ -25,10 +27,6 @@
     align-items: center;
     justify-content: center;
     transition: all ease 0.3s;
-
-    &:hover {
-      background-color: #142c54;
-    }
   }
 
   ul {

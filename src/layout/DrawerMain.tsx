@@ -1,4 +1,4 @@
-"use client";
+import React from "react";
 
 import ModernDrawer from "react-modern-drawer";
 import "react-modern-drawer/dist/index.css";
@@ -7,9 +7,15 @@ import { IoIosClose } from "react-icons/io";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 
-function Drawer({ isOpen, toggle }: { isOpen: boolean; toggle: () => void }) {
+function DrawerMain({
+  isOpen,
+  toggle,
+}: {
+  isOpen: boolean;
+  toggle: () => void;
+}) {
   const router = useRouter();
-  
+
   return (
     <>
       <ModernDrawer
@@ -28,7 +34,7 @@ function Drawer({ isOpen, toggle }: { isOpen: boolean; toggle: () => void }) {
           </button>
 
           <button id="btn-explore" onClick={() => router.push("/")}>
-            Explore
+            Add Job Vacancy
           </button>
 
           <div className="w-full border border-gray-700 border-opacity-60"></div>
@@ -45,4 +51,4 @@ function Drawer({ isOpen, toggle }: { isOpen: boolean; toggle: () => void }) {
   );
 }
 
-export default Drawer;
+export default DrawerMain;
