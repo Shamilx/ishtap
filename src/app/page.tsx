@@ -5,7 +5,6 @@ import React from "react";
 // icons
 import { IoSearchSharp } from "react-icons/io5";
 import { IoFilterSharp } from "react-icons/io5";
-import { RiArrowDropDownLine } from "react-icons/ri";
 
 function Page() {
   return (
