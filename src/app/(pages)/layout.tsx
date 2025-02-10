@@ -1,6 +1,5 @@
 import { jost } from "@/fonts/fonts";
 import HeaderMain from "@/layout/HeaderMain";
-import Link from "next/link";
 import React from "react";
 
 // icons
