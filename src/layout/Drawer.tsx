@@ -27,7 +27,7 @@ function Drawer({ isOpen, toggle }: { isOpen: boolean; toggle: () => void }) {
             <IoIosClose size={32} color="white" />
           </button>
 
-          <button id="btn-explore" onClick={() => router.push("/")}>
+          <button id="btn-explore" onClick={() => router.push("/vacancies")}>
             Explore
           </button>
 

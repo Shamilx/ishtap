@@ -32,7 +32,7 @@ function HeaderHome() {
             <Link href="/privacy">Privacy Policy</Link>
           </ul>
 
-          <Link href="/" id="button-explore" className="hidden sm:flex">
+          <Link href="/vacancies" id="button-explore" className="hidden sm:flex">
             Explore
           </Link>
 
