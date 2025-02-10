@@ -17,7 +17,7 @@ function ClientLink({
   const isActive = pathname === href;
 
   return (
-    <Link href={href} className={`${className} ${isActive && "active"}`}>
+    <Link href={href} className={`${className} ${isActive && "bg-[#e1e1e1] dark:bg-[#2a2a2a]"}`}>
       {children}
     </Link>
   );
