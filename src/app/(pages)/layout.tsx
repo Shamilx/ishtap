@@ -67,7 +67,10 @@ async function Page({ children }: { children: React.ReactNode }) {
             id="navigation"
             className="hidden min-w-[250px] justify-center gap-4 border-r-[2px] border-[#EAEAEA] px-6 dark:border-[#242424] sm:flex sm:flex-col"
           >
-            <ClientLink href={"/vacancies"} className={`dark:text-white has-[.active]:bg-black`}>
+            <ClientLink
+              href={"/vacancies"}
+              className={`has-[.active]:bg-black dark:text-white`}
+            >
               <MdBusinessCenter
                 size={32}
                 className="text-[#242424] dark:text-white"
@@ -97,7 +100,9 @@ async function Page({ children }: { children: React.ReactNode }) {
             </ClientLink>
           </div>
 
-          <div className="p-4">{children}</div>
+          <div className="flex-1 overflow-scroll p-3 no-scrollbar">
+            <div className=" max-h-[100px]">{children}</div>
+          </div>
         </div>
       </div>
     </div>
