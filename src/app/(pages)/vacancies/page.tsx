@@ -8,31 +8,29 @@ import { MdOutlineImageNotSupported } from "react-icons/md";
 import Loading from "@/components/Loading";
 import VacanciesFilter from "@/layout/VacanciesFilter";
 import { CiLocationOn } from "react-icons/ci";
-import { FaRegHeart } from "react-icons/fa";
-import { updateAllLogos } from "@/supabase/test";
+import { useRouter } from "next/navigation";
+import LikeButton from "@/components/LikeButton";
 
 const LIMIT = 5;
 
 const VacanciesPage = () => {
+  const router = useRouter();
   const [vacancies, setVacancies] = useState<Vacancy[]>([]);
   const [loading, setLoading] = useState(false);
   const [page, setPage] = useState(0);
   const [noMoreData, setNoMoreData] = useState(false);
   const observerRef = useRef<HTMLDivElement | null>(null);
+  const [selectOrder, setSelectedOrder] = useState<
+    | "upload_date_desc"
+    | "upload_date_asc"
+    | "salary_desc"
+    | "salary_asc"
+    | string
+  >("default");
 
-  const handleLike = async (
-    e: React.MouseEvent<HTMLButtonElement, MouseEvent>,
-  ) => {
-    e.stopPropagation();
-
-    console.log("Handle like");
-
-    await updateAllLogos();
-  };
-
-  const handleDetails = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
-    console.log("Details");
-  };
+  const [filteredCompany, setFilteredCompany] = useState<string>();
+  const [filteredLocation, setFilteredLocation] = useState<string>();
+  const [filteredJobType, setFilteredJobType] = useState<string>();
 
   const fetchVacancies = useCallback(async () => {
     if (loading || noMoreData) return;
@@ -41,50 +39,119 @@ const VacanciesPage = () => {
     const start = page * LIMIT;
     const end = start + LIMIT - 1;
 
-    const { data, error } = await supabase
-      .from("vacancies")
-      .select("*,companies(title,image)")
-      .order("id", { ascending: true })
-      .range(start, end);
+    let query = supabase.from("vacancies").select("*, companies(title, image)");
+
+    // Apply filters if present
+    if (filteredCompany) {
+      query = query.eq("company", filteredCompany);
+    }
+
+    if (filteredLocation) {
+      query = query.eq("location", filteredLocation);
+    }
+
+    if (filteredJobType) {
+      query = query.eq("job_type", filteredJobType);
+    }
+
+    // Handle ordering logic
+    if (selectOrder === "upload_date_asc") {
+      query = query.order("posted_date", { ascending: true });
+    } else if (selectOrder === "upload_date_desc") {
+      query = query.order("posted_date", { ascending: false });
+    } else if (selectOrder === "salary_asc") {
+      query = query.order("salary", { ascending: true });
+    } else if (selectOrder === "salary_desc") {
+      query = query.order("salary", { ascending: false });
+    } else {
+      query = query.order("id", { ascending: true });
+    }
+
+    if (
+      selectOrder === "default" &&
+      !filteredCompany &&
+      !filteredLocation &&
+      !filteredJobType
+    ) {
+      query = query.range(start, end);
+    } else {
+      setNoMoreData(true);
+    }
+
+    const { data, error } = await query;
 
     if (error) {
       console.error("Error fetching vacancies:", error);
-    } else if (data.length === 0) {
+      setLoading(false);
+      return;
+    }
+
+    if (data.length === 0) {
       setNoMoreData(true);
-      window.scrollTo({ top: 0, behavior: "smooth" });
     } else {
-      setVacancies((prev) => [...prev, ...data]);
+      setVacancies((prev) => {
+        const uniqueVacancies = [
+          ...new Map(prev.concat(data).map((item) => [item.id, item])).values(),
+        ];
+        return uniqueVacancies;
+      });
       setPage((prev) => prev + 1);
     }
 
     setLoading(false);
-  }, [page, loading, noMoreData]);
+  }, [
+    page,
+    loading,
+    noMoreData,
+    selectOrder,
+    filteredCompany,
+    filteredLocation,
+    filteredJobType,
+  ]);
 
   useEffect(() => {
+    setVacancies([]);
+    setPage(0);
+    setNoMoreData(false);
+    fetchVacancies();
+  }, [selectOrder, filteredCompany, filteredLocation, filteredJobType]);
+
+  useEffect(() => {
+    if (!observerRef.current) return;
+
     const observer = new IntersectionObserver(
       (entries) => {
-        if (entries[0].isIntersecting && !loading) {
+        if (entries[0].isIntersecting && !loading && !noMoreData) {
           fetchVacancies();
         }
       },
-      { threshold: 0.3 },
+      { threshold: 0.5 },
     );
 
-    if (observerRef.current) observer.observe(observerRef.current);
+    observer.observe(observerRef.current);
 
     return () => observer.disconnect();
-  }, [fetchVacancies, loading]);
+  }, [fetchVacancies, loading, noMoreData]);
+
+  const handleDetails = (id: number) => {
+    router.push(`/vacancy/${id}`);
+  };
 
   return (
     <div id="vacancies" className="flex flex-col gap-4">
       {vacancies.length === 0 && loading && <Loading />}
 
-      {!loading && vacancies.length !== 0 && <VacanciesFilter />}
+      <VacanciesFilter
+        setSelectedOrder={setSelectedOrder}
+        setFilteredCompany={setFilteredCompany}
+        setFilteredLocation={setFilteredLocation}
+        setFilteredJobType={setFilteredJobType}
+      />
 
       {vacancies.map((vacancy) => (
         <div
-          onClick={handleDetails}
-          key={vacancy.id}
+          key={`${vacancy.id}-${vacancy.company}-${vacancy.title}`}
+          onClick={() => handleDetails(vacancy.id)}
           className="flex min-h-[150px] cursor-pointer items-center gap-2 rounded-[15px] border-2 border-[#D9D9D9] bg-[#EAEAEA] px-3 py-2 transition-all duration-200 hover:bg-[#e3e3e3] dark:border-[#404040] dark:bg-[#242424] dark:text-white dark:hover:!bg-[#202020] sm:h-[100px] sm:min-h-0 sm:gap-4 sm:px-6 sm:py-3"
         >
           {vacancy.companies?.image ? (
@@ -106,9 +173,7 @@ const VacanciesPage = () => {
               <p className="max-w-auto inline-block whitespace-normal text-lg font-bold sm:text-xl">
                 {vacancy.title}
               </p>
-              <button className="ms-auto sm:m-0 sm:p-2" onClick={handleLike}>
-                <FaRegHeart size={20} className="text-[#C90000]" />
-              </button>
+              <LikeButton vacancyId={vacancy.id} />
             </div>
 
             <div className="flex flex-col gap-2 sm:flex-row sm:items-center">
@@ -116,7 +181,7 @@ const VacanciesPage = () => {
                 {vacancy.companies?.title}
               </p>
 
-              <p className="flex items-center gap-1">
+              <p className="flex items-center gap-1 font-bold text-[#6A6A6A]">
                 <CiLocationOn
                   size={24}
                   className="text-primary dark:text-white"

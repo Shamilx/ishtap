@@ -16,6 +16,9 @@ export default {
         tertiary:"#D8C4B6",
         contrast: "#F5EFE7"
       },
+      screens: {
+        'minimum': '300px'
+      }
     },
   },
   plugins: [],

@@ -5,6 +5,7 @@ import { open_sans } from "@/fonts/fonts";
 import { AuthProvider } from "@/context/AuthContext";
 import { cookies } from "next/headers";
 import { ThemeProvider } from "@/context/ThemeProvider";
+import React from "react";
 
 export const metadata: Metadata = {
   title: "Ishtap",
@@ -25,9 +26,15 @@ export default async function RootLayout({
       className={`${theme}`}
     >
       <body>
-        <ThemeProvider>
-          <AuthProvider>{children}</AuthProvider>
-        </ThemeProvider>
+        <div className="minimum:block hidden">
+          <ThemeProvider>
+            <AuthProvider>{children}</AuthProvider>
+          </ThemeProvider>
+        </div>
+
+        <p className="minimum:hidden block text-center">
+          Please use a screen at least 300 px width.
+        </p>
       </body>
     </html>
   );

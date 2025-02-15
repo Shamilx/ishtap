@@ -37,52 +37,53 @@ async function Page({ children }: { children: React.ReactNode }) {
               />
             </div>
           </div>
-
-          
         </div>
 
-        <div className="mt-12 w-full border-[1.5px] border-[#EAEAEA] dark:border-[#242424]"></div>
+        <div className="mt-12 hidden w-full border-[1.5px] border-[#EAEAEA] dark:border-[#242424] lg:block"></div>
 
-        <div id="content-wrapper" className="flex h-full w-full flex-grow">
+        <div
+          id="content-wrapper"
+          className="flex h-full w-full flex-grow flex-col lg:flex-row"
+        >
           <div
             id="navigation"
-            className="hidden min-w-[250px] justify-center gap-4 border-r-[2px] border-[#EAEAEA] px-6 dark:border-[#242424] lg:flex lg:flex-col"
+            className="mt-12 flex min-w-[250px] flex-row justify-stretch gap-1 px-1 py-2 border-r-[2px] border-[#EAEAEA] dark:border-[#242424] lg:mt-0 lg:flex-col lg:justify-center lg:gap-4 lg:px-6"
           >
             <ClientLink
               href={"/vacancies"}
-              className={`has-[.active]:bg-black dark:text-white`}
+              className={`flex-1 has-[.active]:bg-black dark:text-white lg:flex-none`}
             >
               <MdBusinessCenter
-                size={32}
+                size={24}
                 className="text-[#242424] dark:text-white"
               />
               Jobs
             </ClientLink>
 
-            <ClientLink href={"/categories"} className={`dark:text-white`}>
-              <BiCategoryAlt
-                size={32}
-                className="text-[#242424] dark:text-white"
-              />
-              Categories
-            </ClientLink>
-
-            <ClientLink href={"/liked"} className={`dark:text-white`}>
-              <TbHeartFilled size={32} className="text-[#C90000]" />
+            <ClientLink
+              href={"/liked"}
+              className={`flex-1 dark:text-white lg:flex-none`}
+            >
+              <TbHeartFilled size={24} className="text-[#C90000]" />
               Liked
             </ClientLink>
 
-            <ClientLink href={"/companies"} className={`dark:text-white`}>
+            <ClientLink
+              href={"/companies"}
+              className={`flex-1 dark:text-white lg:flex-none`}
+            >
               <IoMdBusiness
-                size={32}
+                size={24}
                 className="text-[#242424] dark:text-white"
               />
               Companies
             </ClientLink>
           </div>
 
-          <div className="flex-1 overflow-scroll p-3 no-scrollbar">
-            <div className=" max-h-[100px]">{children}</div>
+          <div className="mt-0 block w-full border-[1.5px] border-[#EAEAEA] dark:border-[#242424] lg:hidden"></div>
+
+          <div className="no-scrollbar flex-1 overflow-scroll p-3">
+            <div className="max-h-[100px]">{children}</div>
           </div>
         </div>
       </div>
