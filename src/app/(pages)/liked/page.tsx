@@ -97,7 +97,7 @@ function Page() {
 
       {likedVacancies && likedVacancies.length === 0 && (
         <p className="mt-4 text-center font-bold dark:text-white">
-          You didn't like any vacancy.
+          You didn`t like any vacancy.
         </p>
       )}
     </div>

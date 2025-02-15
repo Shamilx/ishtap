@@ -5,7 +5,6 @@ import React from "react";
 // icons
 import { IoSearchSharp } from "react-icons/io5";
 import { MdBusinessCenter } from "react-icons/md";
-import { BiCategoryAlt } from "react-icons/bi";
 import { TbHeartFilled } from "react-icons/tb";
 import { IoMdBusiness } from "react-icons/io";
 import ClientLink from "@/components/ClientLink";

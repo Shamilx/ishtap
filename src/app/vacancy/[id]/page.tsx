@@ -1,4 +1,4 @@
-function page({ slug }: { slug: any }) {
+function page() {
   return <div>page</div>;
 }
 

@@ -15,22 +15,8 @@ type Props = {
 function LikeButton(props: Props) {
   const router = useRouter();
   const { user, loading } = useAuth();
-  if (loading) return;
-
-  if (!user) {
-    return (
-      <button
-        onClick={(e) => {
-          e.stopPropagation();
-          router.push("/login");
-        }}
-      >
-        <FiHeart size={24} color="#C90000" />
-      </button>
-    );
-  }
-
   const [liked, setLiked] = useState<boolean | undefined>(undefined);
+  if (loading) return;
 
   useEffect(() => {
     const fetchLiked = async () => {
@@ -48,6 +34,19 @@ function LikeButton(props: Props) {
 
     fetchLiked();
   }, []);
+
+  if (!user) {
+    return (
+      <button
+        onClick={(e) => {
+          e.stopPropagation();
+          router.push("/login");
+        }}
+      >
+        <FiHeart size={24} color="#C90000" />
+      </button>
+    );
+  }
 
   const like = async (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
     e.stopPropagation();
