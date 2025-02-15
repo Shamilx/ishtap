@@ -3,7 +3,7 @@
 import Loading from "@/components/Loading";
 import Logo from "@/components/Logo";
 import { jost, koulen } from "@/fonts/fonts";
-import supabase from "@/supabase/supabase";
+import supabase from "@/supabase/client";
 import Link from "next/link";
 import React, { useState } from "react";
 

@@ -1,7 +1,12 @@
 export type Vacancy = {
   id: number;
   title: string;
-  company: string;
+  company: number;
+  companies?: {
+    title: string,
+    image: string,
+    email: string,
+  }
   location: string;
   salary: number;
   currency: string;
@@ -14,6 +19,5 @@ export type Vacancy = {
   education_required: string;
   benefits: string[];
   contact_email: string;
-  company_website: string;
   number_of_vacancies: number;
 };

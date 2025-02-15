@@ -1,7 +1,7 @@
 "use client";
 
 import Loading from "@/components/Loading";
-import supabase from "@/supabase/supabase";
+import supabase from "@/supabase/client";
 import { Menu, MenuButton, MenuItem, MenuItems } from "@headlessui/react";
 import { AiOutlineUser } from "react-icons/ai";
 import { IoIosLogIn } from "react-icons/io";
