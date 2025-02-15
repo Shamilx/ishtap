@@ -16,9 +16,10 @@ function LikeButton(props: Props) {
   const router = useRouter();
   const { user, loading } = useAuth();
   const [liked, setLiked] = useState<boolean | undefined>(undefined);
-  if (loading) return;
 
   useEffect(() => {
+    if (loading) return;
+
     const fetchLiked = async () => {
       const { data } = await supabase
         .from("liked")
