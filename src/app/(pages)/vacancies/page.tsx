@@ -152,7 +152,7 @@ const VacanciesPage = () => {
         <div
           key={`${vacancy.id}-${vacancy.company}-${vacancy.title}`}
           onClick={() => handleDetails(vacancy.id)}
-          className="flex min-h-[150px] cursor-pointer items-center gap-2 rounded-[15px] border-2 border-[#D9D9D9] bg-[#EAEAEA] px-3 py-2 transition-all duration-200 hover:bg-[#e3e3e3] dark:border-[#404040] dark:bg-[#242424] dark:text-white dark:hover:!bg-[#202020] sm:h-[100px] sm:min-h-0 sm:gap-4 sm:px-6 sm:py-3"
+          className="flex min-h-[150px] cursor-pointer items-center gap-2 rounded-[15px] bg-[#f4f4f4] px-3 py-2 transition-all duration-200 hover:bg-[#e7e7e7] dark:bg-[#202020] dark:text-white dark:hover:!bg-[#191919] sm:h-[100px] sm:min-h-0 sm:gap-4 sm:px-6 sm:py-3"
         >
           {vacancy.companies?.image ? (
             <Image

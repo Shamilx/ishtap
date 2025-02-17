@@ -1,3 +1,4 @@
+import LikeButton from "@/components/LikeButton";
 import Footer from "@/layout/Footer";
 import HeaderMain from "@/layout/HeaderMain";
 import supabase from "@/supabase/client";
@@ -30,9 +31,12 @@ async function Vacancy({ params }: { params: Promise<{ id: string }> }) {
 
       <div className="mt-16 flex flex-col gap-2 text-wrap break-all px-2 pb-6 md:px-16 lg:flex-row">
         <div id="left" className="flex-1">
-          <p className="text-4xl font-bold dark:text-white sm:text-5xl">
-            {vacancy.title}
-          </p>
+          <div className="flex items-center gap-6">
+            <p className="text-4xl font-bold dark:text-white sm:text-5xl">
+              {vacancy.title}
+            </p>
+            <LikeButton vacancyId={vacancy.id} />
+          </div>
           <div className="mt-6 flex flex-wrap items-center gap-6">
             <div className="flex w-[120px] items-center justify-center gap-1 rounded-[10px] bg-[#FFCC00]/25 py-1 text-[#FFCC00] dark:bg-[#FFCC00]/10 dark:text-[#FFCC00] sm:w-[170px]">
               <IoTimerOutline size={20} />
@@ -70,7 +74,7 @@ async function Vacancy({ params }: { params: Promise<{ id: string }> }) {
           <div className="flex max-w-[600px] flex-col items-center lg:px-12">
             <div
               id="company"
-              className="flex h-[150px] w-full items-center gap-2 rounded-[10px] bg-[#141414] p-4 dark:bg-[#202020] lg:min-w-[400px]"
+              className="flex h-[150px] w-full items-center gap-4 rounded-[10px] bg-[#F4F4F4] p-4 dark:bg-[#202020] lg:min-w-[400px]"
             >
               {vacancy.companies?.image ? (
                 <Image
@@ -87,10 +91,10 @@ async function Vacancy({ params }: { params: Promise<{ id: string }> }) {
               )}
 
               <div className="h-[76px]">
-                <p className="text-2xl font-extrabold text-white">
+                <p className="text-2xl font-extrabold text-[#242424] dark:text-white">
                   {vacancy.companies?.title}
                 </p>
-                <p className="font-bold text-[#E8E8E8]">
+                <p className="font-bold text-[#202020] dark:text-[#E8E8E8]">
                   {vacancy.companies?.email}
                 </p>
               </div>

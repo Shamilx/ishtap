@@ -25,25 +25,25 @@ function DrawerMain({
         className="bg-black/80"
       >
         <div
-          className="h-full w-full bg-primary"
+          className="h-full w-full bg-white dark:bg-[#242424]"
           id="modernDrawer"
           style={{ fontFamily: jost.style.fontFamily }}
         >
           <button id="close-btn" onClick={toggle}>
-            <IoIosClose size={32} color="white" />
+            <IoIosClose size={32} className="text-primary dark:text-white" />
           </button>
 
-          <button id="btn-explore" onClick={() => router.push("/")}>
+          <button id="btn-explore" onClick={() => router.push("/")} className="!text-primary dark:!text-white">
             Add Job Vacancy
           </button>
 
-          <div className="w-full border border-gray-700 border-opacity-60"></div>
+          <div className="w-full border border-gray-400 border-opacity-10"></div>
 
           <div id="links">
-            <Link href="/home">Home</Link>
-            <Link href="/contact">Contact</Link>
-            <Link href="/aboutus">About us</Link>
-            <Link href="/privacy">Privacy Policy</Link>
+            <Link href="/home" className="bg-primary dark:bg-[#202020] text-white">Home</Link>
+            <Link href="/contact" className="bg-primary dark:bg-[#202020] text-white">Contact</Link>
+            <Link href="/aboutus" className="bg-primary dark:bg-[#202020] text-white">About us</Link>
+            <Link href="/privacy" className="bg-primary dark:bg-[#202020] text-white">Privacy Policy</Link>
           </div>
         </div>
       </ModernDrawer>

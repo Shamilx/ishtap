@@ -76,6 +76,17 @@ function MenuDropDown() {
             <button
               className="group flex w-full items-center gap-2 rounded-lg px-3 py-1.5 data-[focus]:bg-white/10"
               onClick={async () => {
+                router.push("/profile");
+              }}
+            >
+              <AiOutlineUser size={24} color="white" />
+              Profile
+            </button>
+          </MenuItem>
+          <MenuItem>
+            <button
+              className="group flex w-full items-center gap-2 rounded-lg px-3 py-1.5 data-[focus]:bg-white/10"
+              onClick={async () => {
                 await supabase.auth.signOut();
               }}
             >

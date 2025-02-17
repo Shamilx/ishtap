@@ -45,7 +45,7 @@ function VacanciesFilter(props: Props) {
       <div className="flex items-center gap-4">
         <button
           onClick={toggleDiv}
-          className="relative flex h-[34px] w-[80px] items-center justify-center rounded-[10px] border-2 border-[#D9D9D9] bg-[#EAEAEA] py-2 dark:border-[#404040] dark:bg-[#242424] sm:w-[176px]"
+          className="relative flex h-[34px] w-[80px] items-center justify-center rounded-[10px] bg-[#F4F4F4] py-2 dark:bg-[#242424] sm:w-[176px]"
         >
           <IoFilterSharp
             size={20}
@@ -58,7 +58,7 @@ function VacanciesFilter(props: Props) {
 
         <div className="flex w-full items-center justify-end gap-2 sm:justify-normal">
           <select
-            className="rounded-[5px] border-2 border-[#D9D9D9] bg-[#EAEAEA] font-bold text-[#6A6A6A] outline-none hover:bg-none dark:border-[#404040] dark:bg-[#242424] dark:text-white sm:flex-none sm:px-2"
+            className="rounded-[5px] bg-[#F4F4F4] font-bold text-[#6A6A6A] outline-none hover:bg-none dark:bg-[#242424] dark:text-white sm:flex-none sm:px-2"
             onChange={(e) => {
               props.setSelectedOrder(e.target.value as string);
             }}
@@ -76,7 +76,7 @@ function VacanciesFilter(props: Props) {
         style={{
           height: isOpen ? "50px" : "0",
         }}
-        className={`${isOpen && `min-h-[150px]`} mt-4 flex items-center overflow-hidden rounded-[10px] sm:min-h-0 ${isOpen && `border-2`} border-[#D9D9D9] bg-[#EAEAEA] dark:border-[#404040] dark:bg-[#242424]`}
+        className={`${isOpen && `min-h-[150px]`} mt-4 flex items-center overflow-hidden rounded-[10px] sm:min-h-0 ${isOpen && `border-2`} border-[#D9D9D9] bg-[#F4F4F4] dark:border-[#404040] dark:bg-[#242424]`}
       >
         <div className="flex w-full flex-col justify-stretch gap-2 px-2 py-2 dark:text-white sm:flex-row sm:items-center">
           <div className="flex-1 items-center gap-2">
