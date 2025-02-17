@@ -12,7 +12,7 @@ import ClientLink from "@/components/ClientLink";
 async function Page({ children }: { children: React.ReactNode }) {
   return (
     <div
-      className="flex min-h-[100vh] flex-col bg-contrast dark:bg-[#141414]"
+      className="flex min-h-[100vh] flex-col bg-white dark:bg-[#141414]"
       id="main"
     >
       <HeaderMain />

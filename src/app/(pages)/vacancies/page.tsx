@@ -7,7 +7,7 @@ import Image from "next/image";
 import { MdOutlineImageNotSupported } from "react-icons/md";
 import Loading from "@/components/Loading";
 import VacanciesFilter from "@/layout/VacanciesFilter";
-import { CiLocationOn } from "react-icons/ci";
+import { IoLocationSharp } from "react-icons/io5";
 import { useRouter } from "next/navigation";
 import LikeButton from "@/components/LikeButton";
 
@@ -56,13 +56,13 @@ const VacanciesPage = () => {
 
     // Handle ordering logic
     if (selectOrder === "upload_date_asc") {
-      query = query.order("posted_date", { ascending: true });
-    } else if (selectOrder === "upload_date_desc") {
       query = query.order("posted_date", { ascending: false });
+    } else if (selectOrder === "upload_date_desc") {
+      query = query.order("posted_date", { ascending: true });
     } else if (selectOrder === "salary_asc") {
-      query = query.order("salary", { ascending: true });
-    } else if (selectOrder === "salary_desc") {
       query = query.order("salary", { ascending: false });
+    } else if (selectOrder === "salary_desc") {
+      query = query.order("salary", { ascending: true });
     } else {
       query = query.order("id", { ascending: true });
     }
@@ -182,7 +182,7 @@ const VacanciesPage = () => {
               </p>
 
               <p className="flex items-center gap-1 font-bold text-[#6A6A6A]">
-                <CiLocationOn
+                <IoLocationSharp
                   size={24}
                   className="text-primary dark:text-white"
                 />

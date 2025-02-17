@@ -1,11 +1,11 @@
 import Loading from "./Loading";
 
-function LoadinScreen() {
+function LoadingScreen() {
   return (
-    <div className="bg-primary flex items-center justify-center h-[100vh]">
+    <div className="flex h-[100vh] items-center justify-center bg-white dark:bg-black">
       <Loading />
     </div>
   );
 }
 
-export default LoadinScreen;
+export default LoadingScreen;

@@ -32,7 +32,7 @@ function Companies() {
           companies.map((company) => (
             <div
               key={company.id}
-              className="flex w-1/5 min-w-[250px] cursor-pointer flex-col items-center justify-center gap-2 border p-4 transition-all duration-200 hover:scale-105 hover:rounded-2xl hover:bg-[#fff] hover:text-black"
+              className="flex w-1/5 min-w-[250px] cursor-pointer flex-col items-center justify-center gap-2 border p-4 transition-all duration-200 hover:scale-105 hover:rounded-2xl hover:bg-black hover:text-white dark:border-[#242424] dark:hover:bg-[#fff] dark:hover:text-black"
             >
               {company.image ? (
                 <Image
