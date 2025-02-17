@@ -1,9 +1,13 @@
 import React from "react";
 
-function Footer() {
+type Props = {
+  className?: string;
+};
+
+function Footer(props: Props) {
   return (
     <footer>
-      <p>© Copyrights belongs to Shamil</p>
+      <p className={props.className}>© Copyrights belongs to Shamil</p>
     </footer>
   );
 }

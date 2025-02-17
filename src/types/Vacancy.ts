@@ -20,4 +20,5 @@ export type Vacancy = {
   benefits: string[];
   contact_email: string;
   number_of_vacancies: number;
+  description: string;
 };
