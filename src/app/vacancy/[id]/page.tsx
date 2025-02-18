@@ -13,13 +13,13 @@ import { MdOutlineImageNotSupported } from "react-icons/md";
 async function Vacancy({ params }: { params: Promise<{ id: string }> }) {
   const id = (await params).id;
 
-  const { data, error } = await supabase
+  const { data } = await supabase
     .from("vacancies")
     .select("*,companies(*)")
     .eq("id", id)
     .returns<VacancyType[]>();
 
-  if (error) return;
+  if (!data) return;
 
   const vacancy = data[0];
 

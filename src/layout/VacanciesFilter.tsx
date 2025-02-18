@@ -1,6 +1,5 @@
 "use client";
 
-import supabase from "@/supabase/client";
 import { get_locations_enum } from "@/supabase/enum/get_locations_enum";
 import { Company } from "@/types/Company";
 import { useEffect, useState } from "react";
@@ -25,11 +24,12 @@ function VacanciesFilter(props: Props) {
 
   useEffect(() => {
     const fetchCompanies = async () => {
-      const { data } = await supabase.from("companies").select("*");
+      const response = await fetch("/api/companies");
+      const data = await response.json();
 
       if (!data) return;
 
-      setCompanies(data);
+      setCompanies(data as Company[]);
     };
 
     const fetchLocations = async () => {

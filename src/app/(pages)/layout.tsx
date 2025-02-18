@@ -46,11 +46,11 @@ async function Page({ children }: { children: React.ReactNode }) {
         >
           <div
             id="navigation"
-            className="mt-12 flex min-w-[250px] flex-row justify-stretch gap-1 px-1 py-2 border-r-[2px] border-[#EAEAEA] dark:border-[#242424] lg:mt-0 lg:flex-col lg:justify-center lg:gap-4 lg:px-6"
+            className="mt-12 flex min-w-[250px] flex-row justify-stretch gap-1 border-r-[2px] border-[#EAEAEA] px-1 py-3 dark:border-[#242424] lg:mt-0 lg:flex-col lg:justify-center lg:gap-4 lg:px-6"
           >
             <ClientLink
               href={"/vacancies"}
-              className={`flex-1 has-[.active]:bg-black dark:text-white lg:flex-none`}
+              className={`flex-1 dark:text-white lg:flex-none`}
             >
               <MdBusinessCenter
                 size={24}
