@@ -6,8 +6,13 @@ const nextConfig: NextConfig = {
       {
         source: "/",
         destination: "/vacancies",
-        permanent: false,
+        permanent: true,
       },
+      {
+        source: "/profile",
+        destination: "/profile/vacancies",
+        permanent: true,
+      }
     ];
   },
   images: {

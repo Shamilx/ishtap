@@ -4,6 +4,7 @@ import HeaderMain from "@/layout/HeaderMain";
 import supabase from "@/supabase/client";
 import { Vacancy as VacancyType } from "@/types/Vacancy";
 import Image from "next/image";
+import { notFound } from "next/navigation";
 
 // icons
 import { IoLocationSharp } from "react-icons/io5";
@@ -19,7 +20,7 @@ async function Vacancy({ params }: { params: Promise<{ id: string }> }) {
     .eq("id", id)
     .returns<VacancyType[]>();
 
-  if (!data) return;
+  if (!data) notFound();
 
   const vacancy = data[0];
 

@@ -21,4 +21,5 @@ export type Vacancy = {
   contact_email: string;
   number_of_vacancies: number;
   description: string;
+  owner: string;
 };

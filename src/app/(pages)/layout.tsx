@@ -46,11 +46,11 @@ async function Page({ children }: { children: React.ReactNode }) {
         >
           <div
             id="navigation"
-            className="mt-12 flex min-w-[250px] flex-row justify-stretch gap-1 border-r-[2px] border-[#EAEAEA] px-1 py-3 dark:border-[#242424] lg:mt-0 lg:flex-col lg:justify-center lg:gap-4 lg:px-6"
+            className="mt-12 flex min-w-[250px] flex-row justify-stretch gap-1 border-r-[2px] border-[#EAEAEA] dark:border-[#242424] lg:mt-0 lg:flex-col lg:justify-center lg:gap-4 lg:px-6 lg:py-3"
           >
             <ClientLink
               href={"/vacancies"}
-              className={`flex-1 dark:text-white lg:flex-none`}
+              className={`flex flex-1 items-center justify-center gap-2 px-2 py-4 dark:text-white lg:flex-none lg:justify-normal lg:rounded-2xl lg:py-2`}
             >
               <MdBusinessCenter
                 size={24}
@@ -61,7 +61,7 @@ async function Page({ children }: { children: React.ReactNode }) {
 
             <ClientLink
               href={"/liked"}
-              className={`flex-1 dark:text-white lg:flex-none`}
+              className={`flex flex-1 items-center justify-center gap-2 px-2 py-4 dark:text-white lg:flex-none lg:justify-normal lg:rounded-2xl lg:py-2`}
             >
               <TbHeartFilled size={24} className="text-[#C90000]" />
               Liked
@@ -69,7 +69,7 @@ async function Page({ children }: { children: React.ReactNode }) {
 
             <ClientLink
               href={"/companies"}
-              className={`flex-1 dark:text-white lg:flex-none`}
+              className={`flex flex-1 items-center justify-center gap-2 px-2 py-4 dark:text-white lg:flex-none lg:justify-normal lg:rounded-2xl lg:py-2`}
             >
               <IoMdBusiness
                 size={24}
