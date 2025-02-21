@@ -120,7 +120,7 @@ function Vacancies() {
             <p className="text-2xl font-bold">
               You didn't create any vacancies.
             </p>
-            <button className="rounded-full bg-primary px-12 py-2 text-lg font-semibold text-white transition-all duration-300 hover:bg-secondary">
+            <button onClick={() => router.push("/vacancy/add")} className="rounded-full bg-primary px-12 py-2 text-lg font-semibold text-white transition-all duration-300 hover:bg-secondary">
               Create One
             </button>
           </div>

@@ -8,6 +8,7 @@ import { HiBars3 } from "react-icons/hi2";
 import { FaPlus } from "react-icons/fa";
 import ChangeTheme from "@/components/ChangeTheme";
 import dynamic from "next/dynamic";
+import { useRouter } from "next/navigation";
 
 // Dynamically import the component with ssr: false
 const ClientSideDrawer = dynamic(() => import("./DrawerMain"), {
@@ -15,6 +16,7 @@ const ClientSideDrawer = dynamic(() => import("./DrawerMain"), {
 });
 
 function HeaderMain() {
+  const router = useRouter();
   const [isOpen, setIsOpen] = useState(false);
   const toggleDrawer = () => {
     setIsOpen((prevState) => !prevState);
@@ -39,6 +41,7 @@ function HeaderMain() {
           <ChangeTheme />
 
           <button
+            onClick={() => router.push("/vacancy/add")}
             id="button-add"
             className="hidden bg-primary sm:flex dark:bg-contrast"
           >

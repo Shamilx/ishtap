@@ -33,7 +33,7 @@ function DrawerMain({
             <IoIosClose size={32} className="text-primary dark:text-white" />
           </button>
 
-          <button id="btn-explore" onClick={() => router.push("/")} className="!text-primary dark:!text-white">
+          <button id="btn-explore" onClick={() => router.push("/vacancy/add")} className="!text-primary dark:!text-white">
             Add Job Vacancy
           </button>
 

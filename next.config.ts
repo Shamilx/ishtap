@@ -12,7 +12,7 @@ const nextConfig: NextConfig = {
         source: "/profile",
         destination: "/profile/vacancies",
         permanent: true,
-      }
+      },
     ];
   },
   images: {

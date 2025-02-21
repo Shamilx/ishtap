@@ -3,7 +3,7 @@ import HeaderMain from "@/layout/HeaderMain";
 import React from "react";
 import { MdBusinessCenter, MdEdit } from "react-icons/md";
 
-function layout({ children }: { children: React.ReactNode }) {
+function Layout({ children }: { children: React.ReactNode }) {
   return (
     <div
       className="flex min-h-[100vh] flex-col bg-white dark:bg-[#141414]"
@@ -20,11 +20,11 @@ function layout({ children }: { children: React.ReactNode }) {
         >
           <div
             id="navigation"
-            className="mt-12 flex min-w-[250px] flex-row justify-stretch gap-1 border-r-[2px] border-[#EAEAEA]  dark:border-[#242424] lg:mt-0 lg:flex-col lg:justify-center lg:gap-4 lg:px-6 lg:py-3"
+            className="mt-12 flex min-w-[250px] flex-row justify-stretch gap-1 border-r-[2px] border-[#EAEAEA] dark:border-[#242424] lg:mt-0 lg:flex-col lg:justify-center lg:gap-4 lg:px-6 lg:py-3"
           >
             <ClientLink
               href={"/profile/vacancies"}
-              className={`flex flex-1 items-center justify-center gap-2 px-2 py-4 lg:py-2 dark:text-white lg:flex-none lg:justify-normal lg:rounded-2xl`}
+              className={`flex flex-1 items-center justify-center gap-2 px-2 py-4 dark:text-white lg:flex-none lg:justify-normal lg:rounded-2xl lg:py-2`}
             >
               <MdBusinessCenter
                 size={24}
@@ -35,7 +35,7 @@ function layout({ children }: { children: React.ReactNode }) {
 
             <ClientLink
               href={"/profile/editprofile"}
-              className={`flex flex-1 items-center justify-center gap-2 px-2 py-4 lg:py-2 dark:text-white lg:flex-none lg:justify-normal lg:rounded-2xl`}
+              className={`flex flex-1 items-center justify-center gap-2 px-2 py-4 dark:text-white lg:flex-none lg:justify-normal lg:rounded-2xl lg:py-2`}
             >
               <MdEdit size={24} className="text-[#242424] dark:text-white" />
               Edit Profile
@@ -53,4 +53,4 @@ function layout({ children }: { children: React.ReactNode }) {
   );
 }
 
-export default layout;
+export default Layout;
