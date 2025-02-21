@@ -3,31 +3,6 @@
 import { useState } from "react";
 import { CiTrash } from "react-icons/ci";
 
-type Props = {
-  benefitsToShow?: string[];
-};
-
-const Benefit = ({
-  value,
-  index,
-  onChange,
-}: {
-  value?: string;
-  index: number;
-  onChange: (index: number, newValue: string) => void;
-}) => {
-  return (
-    <input
-      type="text"
-      name={`benefit-${index}`}
-      value={value}
-      onChange={(e) => onChange(index, e.target.value)}
-      placeholder="Enter benefit"
-      className="mt-1 block w-full rounded-md border-2 border-gray-100 ps-1 shadow-sm dark:border-[#404040] dark:bg-[#242424] dark:text-white"
-    />
-  );
-};
-
 function BenefitField({
   benefitsToShow = [],
   onChange,

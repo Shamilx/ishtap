@@ -6,9 +6,9 @@ import {
   useEffect,
   useState,
   ReactNode,
+  useCallback,
 } from "react";
-
-import { User } from "@supabase/supabase-js";
+import { User, Session } from "@supabase/supabase-js";
 import supabase from "@/supabase/client";
 import { useRouter } from "next/navigation";
 
@@ -24,6 +24,18 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const [loading, setLoading] = useState(true);
   const router = useRouter();
 
+  const handleAuthChange = useCallback(
+    (_event: string, session: Session | null) => {
+      setUser(session?.user || null);
+      setLoading(false);
+
+      if (_event == "SIGNED_OUT") {
+        router.replace("/");
+      }
+    },
+    [router],
+  );
+
   useEffect(() => {
     const fetchUser = async () => {
       const {
@@ -35,16 +47,13 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
     fetchUser();
 
-    const { data: authListener } = supabase.auth.onAuthStateChange(
-      (_event, session) => {
-        setUser(session?.user || null);
-        setLoading(false);
-        router.replace("/")
-      },
-    );
+    const { data: authListener } =
+      supabase.auth.onAuthStateChange(handleAuthChange);
 
-    return () => authListener.subscription.unsubscribe();
-  }, []);
+    return () => {
+      authListener?.subscription?.unsubscribe();
+    };
+  }, [handleAuthChange]);
 
   return (
     <AuthContext.Provider value={{ user, loading }}>

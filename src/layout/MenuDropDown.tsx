@@ -8,6 +8,7 @@ import { IoIosLogIn } from "react-icons/io";
 import { HiUserAdd } from "react-icons/hi";
 import { useRouter } from "next/navigation";
 import { useAuth } from "@/context/AuthContext";
+import { RiAdminLine } from "react-icons/ri";
 
 function MenuDropDown() {
   const router = useRouter();
@@ -73,10 +74,24 @@ function MenuDropDown() {
           className="mt-4 w-52 origin-top-right rounded-xl border border-white/5 bg-primary/60 p-1 text-sm/6 font-[500] text-white transition duration-100 ease-out [--anchor-gap:var(--spacing-1)] focus:outline-none data-[closed]:scale-95 data-[closed]:opacity-0"
         >
           <MenuItem>
-            <div className="group justify-center flex w-full items-center gap-2 rounded-lg px-3 py-1.5 data-[focus]:bg-white/10">
+            <div className="group flex w-full items-center justify-center gap-2 rounded-lg px-3 py-1.5 data-[focus]:bg-white/10">
               {user.email}
             </div>
           </MenuItem>
+          {user.id === process.env.NEXT_PUBLIC_SUPABASE_ADMIN_UID! && (
+            <MenuItem>
+              <button
+                className="group flex w-full items-center gap-2 rounded-lg px-3 py-1.5 data-[focus]:bg-white/10"
+                onClick={async () => {
+                  router.push("/adminpanel");
+                }}
+              >
+                <RiAdminLine  size={24} color="white" />
+                Admin Panel
+              </button>
+            </MenuItem>
+          )}
+
           <MenuItem>
             <button
               className="group flex w-full items-center gap-2 rounded-lg px-3 py-1.5 data-[focus]:bg-white/10"

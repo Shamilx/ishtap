@@ -1,6 +1,5 @@
 "use client";
 
-import LikeButton from "@/components/LikeButton";
 import Loading from "@/components/Loading";
 import { useAuth } from "@/context/AuthContext";
 import supabase from "@/supabase/client";
@@ -8,7 +7,7 @@ import { Vacancy } from "@/types/Vacancy";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import React, { useEffect, useState } from "react";
-import { CiEdit, CiLocationOn, CiTrash } from "react-icons/ci";
+import { CiEdit, CiLocationOn } from "react-icons/ci";
 import { MdOutlineImageNotSupported } from "react-icons/md";
 
 function Vacancies() {
@@ -118,7 +117,7 @@ function Vacancies() {
         ) : (
           <div className="flex h-full min-h-[200px] flex-1 flex-col items-center justify-center gap-4 text-center dark:text-white">
             <p className="text-2xl font-bold">
-              You didn't create any vacancies.
+              You didn&apos;t create any vacancies.
             </p>
             <button onClick={() => router.push("/vacancy/add")} className="rounded-full bg-primary px-12 py-2 text-lg font-semibold text-white transition-all duration-300 hover:bg-secondary">
               Create One

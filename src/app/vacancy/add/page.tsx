@@ -22,9 +22,6 @@ export default function AddVacancy() {
 
   const { user, loading } = useAuth();
 
-  let today = new Date();
-  let dateStr = `${today.getFullYear()}-${today.getMonth() + 1}-${today.getDate()}`;
-
   useEffect(() => {
     if(loading) return;
 
@@ -91,7 +88,7 @@ export default function AddVacancy() {
   };
 
   return (
-    <div className="dark:bg-[#242424]">
+    <div className="dark:bg-[#141414]">
       <HeaderMain />
       <h2 className="mb-4 text-center text-2xl font-bold dark:text-white">
         Add Vacancy

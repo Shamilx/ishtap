@@ -11,6 +11,7 @@ import { get_locations_enum } from "@/supabase/enum/get_locations_enum";
 import { get_currencies_enum } from "@/supabase/enum/get_currencies_enum";
 import SkillField from "@/layout/SkillField";
 import BenefitField from "@/layout/BenefitsField";
+import { Company } from "@/types/Company";
 
 async function fetchVacancy(id: string) {
   const { data: vacancyArray } = await supabase
@@ -35,6 +36,7 @@ export default function Edit({ params }: { params: Promise<{ id: string }> }) {
 
   const [locations, setLocations] = useState<string[] | undefined>();
   const [currencies, setCurrencies] = useState<string[] | undefined>();
+  const [companies, setCompanies] = useState<Company[] | undefined>();
 
   const { user, loading } = useAuth();
 
@@ -71,8 +73,16 @@ export default function Edit({ params }: { params: Promise<{ id: string }> }) {
       const locations = await get_locations_enum();
       const currencies = await get_currencies_enum();
 
+      const { data: companies } = await supabase
+        .from("companies")
+        .select("id,title")
+        .returns<Company[]>();
+
       setLocations(locations);
       setCurrencies(currencies);
+
+      if (!companies) return;
+      setCompanies(companies);
     };
 
     fetchData();
@@ -96,6 +106,10 @@ export default function Edit({ params }: { params: Promise<{ id: string }> }) {
 
   const deleteVacancy = async () => {
     if (!unwrappedParams) return;
+
+    const confirmation = confirm("Are you sure to DELETE?");
+
+    if (!confirmation) return;
 
     const { error } = await supabase
       .from("vacancies")
@@ -140,7 +154,7 @@ export default function Edit({ params }: { params: Promise<{ id: string }> }) {
   if (!vacancy) return <p className="text-center text-gray-500">Loading...</p>;
 
   return (
-    <div className="dark:bg-[#242424]">
+    <div className="dark:bg-[#141414]">
       <HeaderMain />
       <h2 className="mb-4 text-center text-2xl font-bold dark:text-white">
         Edit Vacancy
@@ -165,11 +179,33 @@ export default function Edit({ params }: { params: Promise<{ id: string }> }) {
 
         <label className="block">
           <span className="font-bold text-gray-700 dark:text-white">
+            Company:
+          </span>
+          <select
+            name="company"
+            required
+            value={formData.company}
+            onChange={handleChange}
+            className="mt-1 block w-full rounded-md border-2 border-gray-100 ps-1 shadow-sm dark:border-[#404040] dark:bg-[#242424] dark:text-white"
+          >
+            <option value={""} disabled>
+              Select Company
+            </option>
+            {companies?.map((company) => (
+              <option key={company.id} value={company.id}>
+                {company.title}
+              </option>
+            ))}
+          </select>
+        </label>
+
+        <label className="block">
+          <span className="font-bold text-gray-700 dark:text-white">
             Location:
           </span>
           <select
             name="location"
-            defaultValue={formData.location}
+            value={formData.location}
             onChange={handleChange}
             className="mt-1 block w-full rounded-md border-2 border-gray-100 ps-1 shadow-sm dark:border-[#404040] dark:bg-[#242424] dark:text-white"
           >
@@ -204,7 +240,7 @@ export default function Edit({ params }: { params: Promise<{ id: string }> }) {
           </span>
           <select
             name="currency"
-            defaultValue={formData.currency}
+            value={formData.currency}
             onChange={handleChange}
             className="mt-1 block w-full rounded-md border-2 border-gray-100 ps-1 shadow-sm dark:border-[#404040] dark:bg-[#242424] dark:text-white"
           >

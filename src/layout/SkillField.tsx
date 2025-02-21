@@ -4,40 +4,6 @@ import { get_skills_enum } from "@/supabase/enum/get_skills_enum";
 import { useEffect, useState } from "react";
 import { CiTrash } from "react-icons/ci";
 
-type Props = {
-  skillsToShow?: string[];
-};
-
-const Skill = ({
-  skillsEnum,
-  value,
-  index,
-  onChange,
-}: {
-  skillsEnum: string[];
-  value?: string;
-  index: number;
-  onChange: (index: number, newValue: string) => void;
-}) => {
-  return (
-    <select
-      name={`skill-${index}`}
-      value={value}
-      onChange={(e) => onChange(index, e.target.value)}
-      className="mt-1 block w-full rounded-md border-2 border-gray-100 ps-1 shadow-sm dark:border-[#404040] dark:bg-[#242424] dark:text-white"
-    >
-      {value === "" && <option value={""}>Select Skill</option>}
-
-      {skillsEnum.map((skill, i) => {
-        return (
-          <option key={skill} value={skill}>
-            {skill}
-          </option>
-        );
-      })}
-    </select>
-  );
-};
 
 function SkillField({
   skillsToShow = [],

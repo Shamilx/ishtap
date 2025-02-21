@@ -14,6 +14,8 @@ function Layout({ children }: LayoutProps) {
 
   if (loading) return <LoadingScreen />;
 
+  if(user) redirect("/");
+  
   return <>{children}</>;
 }
 
