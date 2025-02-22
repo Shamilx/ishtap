@@ -2,8 +2,9 @@ import EditButton from "@/components/EditButton";
 import LikeButton from "@/components/LikeButton";
 import Footer from "@/layout/Footer";
 import HeaderMain from "@/layout/HeaderMain";
-import supabase from "@/supabase/client";
+import createClient from "@/supabase/server";
 import { Vacancy as VacancyType } from "@/types/Vacancy";
+import { cookies } from "next/headers";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 
@@ -14,6 +15,7 @@ import { MdOutlineImageNotSupported } from "react-icons/md";
 
 async function Vacancy({ params }: { params: Promise<{ id: string }> }) {
   const id = (await params).id;
+  const supabase = await createClient(await cookies());
 
   const { data } = await supabase
     .from("vacancies")
