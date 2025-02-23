@@ -22,7 +22,7 @@ function AboutUs() {
             <p className="mb-4 leading-relaxed text-gray-700 dark:text-gray-400">
               At ISHTAP, our mission is to simplify and enhance the hiring
               process for both employers and job seekers. We believe that
-              finding the right match shouldn't be a tedious task.
+              finding the right match shouldn&apos;t be a tedious task.
             </p>
             <p className="mb-4 leading-relaxed text-gray-700 dark:text-gray-400">
               We strive to create a platform that fosters seamless connections,
@@ -61,7 +61,7 @@ function AboutUs() {
                 both employers and employees.
               </li>
               <li className="mb-2">
-                <strong>Dedicated Support:</strong> We're here to assist you
+                <strong>Dedicated Support:</strong> We&apos;re here to assist you
                 every step of the way.
               </li>
               <li>

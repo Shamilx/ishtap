@@ -39,7 +39,7 @@ function Contact() {
           <div className="mt-8">
             <p className="leading-relaxed text-gray-700 dark:text-gray-400">
               Feel free to reach out to us with any questions or inquiries.
-              We're here to help!
+              We&apos;re here to help!
             </p>
           </div>
         </div>

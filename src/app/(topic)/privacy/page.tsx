@@ -26,10 +26,10 @@ function PrivacyPolicy() {
 
           <h2 className="text-2xl font-semibold text-gray-800 dark:text-gray-300 mb-4">How We Use Your Information</h2>
           <ul className="list-disc list-inside text-gray-700 dark:text-gray-400 mb-6">
-            <li className="mb-2">To provide and improve ISHTAP's services, including matching employers and employees.</li>
+            <li className="mb-2">To provide and improve ISHTAP&apos;s services, including matching employers and employees.</li>
             <li className="mb-2">To communicate with you about your account, job opportunities, and platform updates.</li>
             <li className="mb-2">To personalize your experience on ISHTAP.</li>
-            <li className="mb-2">To analyze usage trends and improve our platform's functionality.</li>
+            <li className="mb-2">To analyze usage trends and improve our platform&apos;s functionality.</li>
             <li>To ensure the security and integrity of ISHTAP.</li>
           </ul>
 

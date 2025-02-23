@@ -1,5 +1,4 @@
 import Footer from "@/layout/Footer";
-import HeaderHome from "@/layout/HeaderHome";
 import HeaderMain from "@/layout/HeaderMain";
 import React from "react";
 

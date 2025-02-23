@@ -25,6 +25,8 @@ export default async function RootLayout({
       style={{ fontFamily: `${open_sans.style.fontFamily}` }}
       className={`${theme}`}
     >
+      <head>
+      </head>
       <body>
         <ThemeProvider>
           <AuthProvider>{children}</AuthProvider>
