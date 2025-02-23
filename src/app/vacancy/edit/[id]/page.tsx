@@ -73,6 +73,8 @@ export default function Edit({ params }: { params: Promise<{ id: string }> }) {
   }, [unwrappedParams, router, loading]);
 
   useEffect(() => {
+    if(loading) return;
+    
     const fetchData = async () => {
       const locations = await get_locations_enum();
       const currencies = await get_currencies_enum();
@@ -90,7 +92,7 @@ export default function Edit({ params }: { params: Promise<{ id: string }> }) {
     };
 
     fetchData();
-  }, []);
+  }, [loading]);
 
   const handleChange = (
     e: React.ChangeEvent<
