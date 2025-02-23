@@ -1,13 +1,12 @@
-import { jost } from "@/fonts/fonts";
 import HeaderMain from "@/layout/HeaderMain";
 import React from "react";
 
 // icons
-import { IoSearchSharp } from "react-icons/io5";
 import { MdBusinessCenter } from "react-icons/md";
 import { TbHeartFilled } from "react-icons/tb";
 import { IoMdBusiness } from "react-icons/io";
 import ClientLink from "@/components/ClientLink";
+import SearchBar from "@/components/SearchBar";
 
 async function Page({ children }: { children: React.ReactNode }) {
   return (
@@ -18,25 +17,7 @@ async function Page({ children }: { children: React.ReactNode }) {
       <HeaderMain />
 
       <div id="main-content" className="flex flex-grow flex-col">
-        <div
-          id="searching"
-          className="mt-4 flex gap-4 px-6 md:mt-8 md:px-16 lg:items-center lg:px-24"
-        >
-          <div className="flex h-[50px] w-full items-center border-2 border-[#D9D9D9] bg-[#EAEAEA] dark:border-[#404040] dark:bg-[#242424] lg:w-[500px]">
-            <input
-              placeholder="Search job title, company name et.c"
-              className="flex-[0.9] bg-transparent pl-2 font-semibold outline-none placeholder:text-[#A0A0A0] dark:text-white"
-              style={{ fontFamily: `${jost.style.fontFamily}` }}
-            />
-
-            <div className="flex flex-[0.1] items-center justify-end pe-2">
-              <IoSearchSharp
-                size={24}
-                className="text-[#6A6A6A] dark:text-white"
-              />
-            </div>
-          </div>
-        </div>
+        <SearchBar />
 
         <div className="mt-12 hidden w-full border-[1.5px] border-[#EAEAEA] dark:border-[#242424] lg:block"></div>
 
@@ -50,7 +31,7 @@ async function Page({ children }: { children: React.ReactNode }) {
           >
             <ClientLink
               href={"/vacancies"}
-              className={`flex flex-1 items-center justify-center gap-2 px-2 py-4 dark:text-white lg:flex-none lg:justify-normal lg:rounded-2xl lg:py-2`}
+              className={`flex flex-1 items-center justify-center gap-2 py-4 dark:text-white lg:flex-none lg:justify-normal lg:rounded-2xl lg:py-2`}
             >
               <MdBusinessCenter
                 size={24}
@@ -61,7 +42,7 @@ async function Page({ children }: { children: React.ReactNode }) {
 
             <ClientLink
               href={"/liked"}
-              className={`flex flex-1 items-center justify-center gap-2 px-2 py-4 dark:text-white lg:flex-none lg:justify-normal lg:rounded-2xl lg:py-2`}
+              className={`flex flex-1 items-center justify-center gap-2 py-4 dark:text-white lg:flex-none lg:justify-normal lg:rounded-2xl lg:py-2`}
             >
               <TbHeartFilled size={24} className="text-[#C90000]" />
               Liked
@@ -69,7 +50,7 @@ async function Page({ children }: { children: React.ReactNode }) {
 
             <ClientLink
               href={"/companies"}
-              className={`flex flex-1 items-center justify-center gap-2 px-2 py-4 dark:text-white lg:flex-none lg:justify-normal lg:rounded-2xl lg:py-2`}
+              className={`flex flex-1 items-center justify-center gap-2 py-4 dark:text-white lg:flex-none lg:justify-normal lg:rounded-2xl lg:py-2`}
             >
               <IoMdBusiness
                 size={24}
