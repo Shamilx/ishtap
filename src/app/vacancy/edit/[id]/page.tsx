@@ -168,9 +168,16 @@ export default function Edit({ params }: { params: Promise<{ id: string }> }) {
       .upsert({
         ...formData,
         action: "update",
-        skills_required:
-          new_skills_required.length > 0 ? new_skills_required : null,
-        benefits: new_benefits.length > 0 ? new_benefits : null,
+        skills_required: new_skills_required
+          ? new_skills_required.length > 0
+            ? new_skills_required
+            : null
+          : null,
+        benefits: new_benefits
+          ? new_benefits.length > 0
+            ? new_benefits
+            : null
+          : null,
         vacancyID: unwrappedParams.id,
       })
       .eq("vacancyID", unwrappedParams.id);
