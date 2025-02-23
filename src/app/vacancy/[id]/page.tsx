@@ -1,7 +1,5 @@
 import EditButton from "@/components/EditButton";
 import LikeButton from "@/components/LikeButton";
-import Footer from "@/layout/Footer";
-import HeaderMain from "@/layout/HeaderMain";
 import createClient from "@/supabase/server";
 import { Vacancy as VacancyType } from "@/types/Vacancy";
 import { cookies } from "next/headers";

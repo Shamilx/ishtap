@@ -1,11 +1,9 @@
 "use client";
 
-import HeaderMain from "@/layout/HeaderMain";
 import supabase from "@/supabase/client";
 import { Vacancy } from "@/types/Vacancy";
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
-import Footer from "@/layout/Footer";
 import { useAuth } from "@/context/AuthContext";
 import { get_locations_enum } from "@/supabase/enum/get_locations_enum";
 import { get_currencies_enum } from "@/supabase/enum/get_currencies_enum";
