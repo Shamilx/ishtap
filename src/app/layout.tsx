@@ -26,6 +26,21 @@ export default async function RootLayout({
       className={`${theme}`}
     >
       <head>
+        <link
+          rel="icon"
+          type="image/png"
+          href="/favorites/favicon-96x96.png"
+          sizes="96x96"
+        />
+        <link rel="icon" type="image/svg+xml" href="/favorites/favicon.svg" />
+        <link rel="shortcut icon" href="/favorites/favicon.ico" />
+        <link
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href="/favorites/apple-touch-icon.png"
+        />
+        <meta name="apple-mobile-web-app-title" content="MyWebSite" />
+        <link rel="manifest" href="/favorites/site.webmanifest" />
       </head>
       <body>
         <ThemeProvider>
