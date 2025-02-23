@@ -134,14 +134,19 @@ export default function Edit({ params }: { params: Promise<{ id: string }> }) {
 
     const new_benefits = formData.benefits?.filter((benefit) => benefit != "");
 
-    if (!new_skills_required || !new_benefits) return;
-
     if (user?.id == process.env.NEXT_PUBLIC_SUPABASE_ADMIN_UID) {
       const newData = {
         ...formData,
-        skills_required:
-          new_skills_required.length > 0 ? new_skills_required : null,
-        benefits: new_benefits.length > 0 ? new_benefits : null,
+        skills_required: new_skills_required
+          ? new_skills_required.length > 0
+            ? new_skills_required
+            : null
+          : null,
+        benefits: new_benefits
+          ? new_benefits.length > 0
+            ? new_benefits
+            : null
+          : null,
       };
 
       const { error } = await supabase
