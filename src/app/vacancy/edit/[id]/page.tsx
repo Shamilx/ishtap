@@ -58,7 +58,11 @@ export default function Edit({ params }: { params: Promise<{ id: string }> }) {
           return;
         }
 
-        if (fetchedVacancy.owner != user?.id) router.replace("/404");
+        if (
+          fetchedVacancy.owner != user?.id &&
+          user?.id != process.env.NEXT_PUBLIC_SUPABASE_ADMIN_UID!
+        )
+          router.replace("/404");
 
         setVacancy(fetchedVacancy);
         setFormData(fetchedVacancy);
@@ -111,6 +115,7 @@ export default function Edit({ params }: { params: Promise<{ id: string }> }) {
 
     if (!confirmation) return;
 
+    
     const { error } = await supabase
       .from("vacancies")
       .delete()
@@ -131,6 +136,28 @@ export default function Edit({ params }: { params: Promise<{ id: string }> }) {
     const new_benefits = formData.benefits?.filter((benefit) => benefit != "");
 
     if (!new_skills_required || !new_benefits) return;
+
+    if (user?.id == process.env.NEXT_PUBLIC_SUPABASE_ADMIN_UID) {
+      const newData = {
+        ...formData,
+        skills_required:
+          new_skills_required.length > 0 ? new_skills_required : null,
+        benefits: new_benefits.length > 0 ? new_benefits : null,
+      };
+
+      const { error } = await supabase
+        .from("vacancies")
+        .update(newData)
+        .eq("id", unwrappedParams.id);
+
+      if (!error) {
+        alert("Vacancy has been updated.");
+      } else {
+        console.error("Error updating vacancy:", error);
+      }
+
+      return;
+    }
 
     const { error } = await supabase
       .from("request_vacancies")

@@ -1,9 +1,7 @@
 import { createServerClient } from "@supabase/ssr";
-import { cookies } from "next/headers";
+import { ReadonlyRequestCookies } from "next/dist/server/web/spec-extension/adapters/request-cookies";
 
-export async function createClient() {
-  const cookieStore = await cookies();
-
+export async function createClient(cookieStore: ReadonlyRequestCookies) {
   return createServerClient(
     process.env.NEXT_PUBLIC_SUPABASE_URL!,
     process.env.NEXT_PRIVATE_SUPABASE_SERVICE_KEY!,
@@ -18,9 +16,6 @@ export async function createClient() {
               cookieStore.set(name, value, options),
             );
           } catch {
-            // The `setAll` method was called from a Server Component.
-            // This can be ignored if you have middleware refreshing
-            // user sessions.
           }
         },
       },
@@ -28,6 +23,4 @@ export async function createClient() {
   );
 }
 
-const supabase = await createClient();
-
-export default supabase;
+export default createClient;

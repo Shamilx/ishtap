@@ -1,0 +1,209 @@
+import createClient from "@/supabase/server";
+import { cookies } from "next/headers";
+import { request_vacancy } from "../page";
+import { notFound } from "next/navigation";
+import Image from "next/image";
+import { MdOutlineImageNotSupported } from "react-icons/md";
+import { IoLocationSharp, IoTimerOutline } from "react-icons/io5";
+import AdminPanelApproveDelete from "@/layout/AdminPanelApproveDelete";
+
+async function Changes({ params }: { params: Promise<{ id: string }> }) {
+  const id = (await params).id;
+
+  const supabase = await createClient(await cookies());
+
+  const { data } = await supabase
+    .from("request_vacancies")
+    .select("*,companies(*)")
+    .eq("id", id)
+    .returns<request_vacancy[]>();
+
+  if (!data) notFound();
+
+  const vacancy = data[0];
+
+  if (!vacancy) notFound();
+
+  const deadline = new Date(vacancy.deadline);
+
+  return (
+    <div className="flex min-h-[100vh] flex-col bg-white dark:bg-[#141414]">
+      <div className="mt-16 flex flex-col gap-2 text-wrap break-all px-2 pb-6 lg:flex-row">
+        <div id="left" className="flex-1">
+          <div className="flex flex-col items-center gap-6 lg:flex-row lg:items-center">
+            <p className="text-4xl font-bold dark:text-white sm:text-5xl">
+              {vacancy.title}
+            </p>
+            {vacancy.action === "update" && (
+              <div className="flex items-center justify-center gap-1 text-nowrap break-normal rounded-[10px] bg-blue-400 px-4 py-1 text-[white]">
+                <p className="text-lg font-bold">UPDATE</p>
+              </div>
+            )}
+
+            {vacancy.action === "insert" && (
+              <div className="flex items-center justify-center gap-1 text-nowrap break-normal rounded-[10px] bg-green-600 px-4 py-1 text-[white]">
+                <p className="text-lg font-bold">INSERT</p>
+              </div>
+            )}
+
+            <AdminPanelApproveDelete id={id} />
+          </div>
+          <div className="mt-6 flex flex-wrap items-center gap-6">
+            <div className="flex w-[120px] items-center justify-center gap-1 rounded-[10px] bg-[#FFCC00]/25 py-1 text-[#FFCC00] dark:bg-[#FFCC00]/10 dark:text-[#FFCC00] sm:w-[170px]">
+              <IoTimerOutline size={20} />
+              <p className="text-md font-bold">
+                {deadline.getDay()}.{deadline.getMonth()}.
+                {deadline.getFullYear()}
+              </p>
+            </div>
+
+            <div className="flex items-center justify-center gap-1 py-1">
+              <IoLocationSharp
+                size={20}
+                className="text-primary dark:text-white"
+              />
+              <p className="text-md font-bold dark:text-white">
+                {vacancy.location}
+              </p>
+            </div>
+
+            <div className="flex items-center gap-1 py-1">
+              <p className="text-xl font-bold dark:text-white">
+                {vacancy.salary} {vacancy.currency}
+              </p>
+            </div>
+          </div>
+          <p className="mt-6 whitespace-pre-line font-semibold leading-[26px] tracking-tight text-[#777]">
+            {vacancy.description}
+          </p>
+        </div>
+
+        <div
+          id="right"
+          className="mt-6 flex flex-1 flex-col lg:mt-0 lg:items-center"
+        >
+          <div className="flex max-w-[600px] flex-col items-center lg:px-12">
+            <div
+              id="company"
+              className="flex h-[150px] w-full items-center gap-4 rounded-[10px] bg-[#F4F4F4] p-4 dark:bg-[#202020] lg:min-w-[400px]"
+            >
+              {vacancy.companies?.image ? (
+                <Image
+                  src={vacancy.companies.image}
+                  alt=""
+                  className="h-[76px] w-[76px]"
+                  width={76}
+                  height={76}
+                />
+              ) : (
+                <div className="flex h-[76px] w-[76px] items-center justify-center rounded-[76px] bg-[#6A6A6A]">
+                  <MdOutlineImageNotSupported size={24} color="white" />
+                </div>
+              )}
+
+              <div className="h-[76px]">
+                <p className="text-2xl font-extrabold text-[#242424] dark:text-white">
+                  {vacancy.companies?.title}
+                </p>
+                <p className="font-bold text-[#202020] dark:text-[#E8E8E8]">
+                  {vacancy.companies?.email}
+                </p>
+              </div>
+            </div>
+
+            <div
+              id="properties"
+              className="mt-6 flex w-full flex-col gap-2 dark:text-white"
+            >
+              {!(vacancy.remote === null) && (
+                <div className="flex items-center gap-2">
+                  <label className="break-keep text-lg font-bold">
+                    Remote:
+                  </label>
+                  <p className="dark:text-[#c0c0c0]">
+                    {vacancy.remote ? "Remote" : "Not Remote"}
+                  </p>
+                </div>
+              )}
+
+              {vacancy.job_type && (
+                <div className="flex items-center gap-2">
+                  <label className="break-keep text-lg font-bold">
+                    Job Type:
+                  </label>
+                  <p className="dark:text-[#c0c0c0]">{vacancy.job_type}</p>
+                </div>
+              )}
+
+              {vacancy.education_required && (
+                <div className="flex items-center gap-2">
+                  <label className="break-keep text-lg font-bold">
+                    Education:
+                  </label>
+                  <p className="dark:text-[#c0c0c0]">
+                    {vacancy.education_required}
+                  </p>
+                </div>
+              )}
+
+              {vacancy.experience_level && (
+                <div className="flex items-center gap-2">
+                  <label className="break-keep text-lg font-bold">
+                    Experience Level:
+                  </label>
+                  <p className="dark:text-[#c0c0c0]">
+                    {vacancy.experience_level}
+                  </p>
+                </div>
+              )}
+            </div>
+
+            {vacancy.skills_required && (
+              <div id="skills-required" className="mt-8 w-full">
+                <p className="text-2xl font-bold text-black dark:text-white">
+                  Skills Required
+                </p>
+
+                <div className="mt-2 flex flex-wrap gap-2">
+                  {vacancy.skills_required.map((skill) => (
+                    <>
+                      <div
+                        key={skill}
+                        className="rounded-3xl bg-[#E2E2E2] px-6 py-2 font-bold dark:bg-[#202020] dark:text-white"
+                      >
+                        {skill}
+                      </div>
+                    </>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {vacancy.benefits && (
+              <div id="benefits-required" className="mt-8 w-full">
+                <p className="text-2xl font-bold text-black dark:text-white">
+                  Benefits
+                </p>
+
+                <div className="mt-2 flex flex-wrap gap-2">
+                  {vacancy.benefits.map((benefit) => (
+                    <>
+                      <div
+                        key={benefit}
+                        className="rounded-3xl bg-[#E2E2E2] px-6 py-2 font-bold dark:bg-[#202020] dark:text-white"
+                      >
+                        {benefit}
+                      </div>
+                    </>
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default Changes;

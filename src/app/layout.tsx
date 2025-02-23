@@ -26,13 +26,11 @@ export default async function RootLayout({
       className={`${theme}`}
     >
       <body>
-        <div className="minimum:block hidden">
-          <ThemeProvider>
-            <AuthProvider>{children}</AuthProvider>
-          </ThemeProvider>
-        </div>
+        <ThemeProvider>
+          <AuthProvider>{children}</AuthProvider>
+        </ThemeProvider>
 
-        <p className="minimum:hidden block text-center">
+        <p className="block text-center minimum:hidden">
           Please use a screen at least 300 px width.
         </p>
       </body>

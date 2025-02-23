@@ -12,3 +12,7 @@
         scrollbar-width: none;
     }
 }
+
+html,body {
+    height: 100% !important;
+}

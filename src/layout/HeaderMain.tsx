@@ -9,6 +9,7 @@ import { FaPlus } from "react-icons/fa";
 import ChangeTheme from "@/components/ChangeTheme";
 import dynamic from "next/dynamic";
 import { useRouter } from "next/navigation";
+import { useAuth } from "@/context/AuthContext";
 
 // Dynamically import the component with ssr: false
 const ClientSideDrawer = dynamic(() => import("./DrawerMain"), {
@@ -22,28 +23,39 @@ function HeaderMain() {
     setIsOpen((prevState) => !prevState);
   };
 
+  const { isAdmin,loading } = useAuth();
+
   return (
     <>
       <header
-        className="flex items-center px-2 py-6 text-primary md:px-16 dark:text-white"
+        className="flex items-center px-2 py-6 text-primary dark:text-white md:px-16"
         id="headermain"
       >
         <Logo />
 
         <div className="ms-auto flex gap-4 font-bold">
-          <ul className="me-6 hidden gap-6 lg:flex">
-            <Link href="/home">Home</Link>
-            <Link href="/contact">Contact</Link>
-            <Link href="/aboutus">About us</Link>
-            <Link href="/privacy">Privacy Policy</Link>
-          </ul>
+          {!loading && (isAdmin ? (
+            <ul className="me-6 hidden gap-6 lg:flex">
+              <Link href="/adminpanel">Dashboard</Link>
+              <Link href="/adminpanel/vacancies">Vacancies</Link>
+              <Link href="/adminpanel/companies">Companies</Link>
+              <Link href="/adminpanel/requests">Requests</Link>
+            </ul>
+          ) : (
+            <ul className="me-6 hidden gap-6 lg:flex">
+              <Link href="/home">Home</Link>
+              <Link href="/contact">Contact</Link>
+              <Link href="/aboutus">About us</Link>
+              <Link href="/privacy">Privacy Policy</Link>
+            </ul>
+          ))}
 
           <ChangeTheme />
 
           <button
             onClick={() => router.push("/vacancy/add")}
             id="button-add"
-            className="hidden bg-primary sm:flex dark:bg-contrast"
+            className="hidden bg-primary dark:bg-contrast sm:flex"
           >
             <FaPlus size={24} className="text-contrast dark:text-primary" />
           </button>

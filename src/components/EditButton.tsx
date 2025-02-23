@@ -13,7 +13,11 @@ function EditButton(props: { id: number; owner: string }) {
 
   if (!user) return;
 
-  if (user.id != props.owner) return;
+  if (
+    user.id != props.owner &&
+    user.id != process.env.NEXT_PUBLIC_SUPABASE_ADMIN_UID!
+  )
+    return;
 
   return (
     <button
