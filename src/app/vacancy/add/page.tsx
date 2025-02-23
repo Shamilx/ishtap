@@ -23,10 +23,10 @@ export default function AddVacancy() {
   const { user, loading } = useAuth();
 
   useEffect(() => {
-    if(loading) return;
+    if (loading) return;
 
-    if(!user) router.replace("/login");
-    
+    if (!user) router.replace("/login");
+
     const fetchData = async () => {
       const locations = await get_locations_enum();
       const currencies = await get_currencies_enum();
@@ -89,7 +89,6 @@ export default function AddVacancy() {
 
   return (
     <div className="dark:bg-[#141414]">
-      <HeaderMain />
       <h2 className="mb-4 text-center text-2xl font-bold dark:text-white">
         Add Vacancy
       </h2>
@@ -267,7 +266,6 @@ export default function AddVacancy() {
           Submit Vacancy
         </button>
       </form>
-      <Footer className="text-black dark:text-white" />
     </div>
   );
 }

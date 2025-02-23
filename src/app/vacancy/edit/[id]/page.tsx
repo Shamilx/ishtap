@@ -73,8 +73,8 @@ export default function Edit({ params }: { params: Promise<{ id: string }> }) {
   }, [unwrappedParams, router, loading]);
 
   useEffect(() => {
-    if(loading) return;
-    
+    if (loading) return;
+
     const fetchData = async () => {
       const locations = await get_locations_enum();
       const currencies = await get_currencies_enum();
@@ -117,7 +117,6 @@ export default function Edit({ params }: { params: Promise<{ id: string }> }) {
 
     if (!confirmation) return;
 
-    
     const { error } = await supabase
       .from("vacancies")
       .delete()
@@ -184,7 +183,6 @@ export default function Edit({ params }: { params: Promise<{ id: string }> }) {
 
   return (
     <div className="dark:bg-[#141414]">
-      <HeaderMain />
       <h2 className="mb-4 text-center text-2xl font-bold dark:text-white">
         Edit Vacancy
       </h2>
@@ -377,8 +375,6 @@ export default function Edit({ params }: { params: Promise<{ id: string }> }) {
           Delete Vacancy
         </button>
       </form>
-
-      <Footer className="text-black dark:text-white" />
     </div>
   );
 }

@@ -31,11 +31,9 @@ async function Vacancy({ params }: { params: Promise<{ id: string }> }) {
 
   return (
     <div className="flex min-h-[100vh] flex-col bg-white dark:bg-[#141414]">
-      <HeaderMain />
-
       <div className="mt-16 flex flex-col gap-2 text-wrap break-all px-2 pb-6 md:px-16 lg:flex-row">
         <div id="left" className="flex-1">
-          <div className="flex flex-col lg:flex-row lg:items-center gap-6">
+          <div className="flex flex-col gap-6 lg:flex-row lg:items-center">
             <p className="text-4xl font-bold dark:text-white sm:text-5xl">
               {vacancy.title}
             </p>
@@ -199,8 +197,6 @@ async function Vacancy({ params }: { params: Promise<{ id: string }> }) {
           </div>
         </div>
       </div>
-
-      <Footer className="!text-black dark:!text-white" />
     </div>
   );
 }
