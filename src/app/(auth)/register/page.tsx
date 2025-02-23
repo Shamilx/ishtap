@@ -5,12 +5,16 @@ import Logo from "@/components/Logo";
 import { jost, koulen } from "@/fonts/fonts";
 import supabase from "@/supabase/client";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import React, { useState } from "react";
+import { BiChevronLeft } from "react-icons/bi";
 
 function Register() {
   const [errorText, setErrorText] = useState<string | undefined | "loading">(
     undefined,
   );
+
+  const router = useRouter();
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -37,7 +41,11 @@ function Register() {
       <div id="left" className="flex items-center justify-center text-primary">
         <Logo />
       </div>
-      <div id="right">
+      <div id="right" className="relative">
+        <button onClick={() => router.replace("/")} className="absolute left-4 top-5">
+          <BiChevronLeft size={24} className="text-white" />
+        </button>
+
         <p id="title" style={{ fontFamily: koulen.style.fontFamily }}>
           Sign Up
         </p>
