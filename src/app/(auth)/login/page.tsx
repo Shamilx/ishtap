@@ -8,7 +8,6 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import React, { useState } from "react";
 import { BiChevronLeft } from "react-icons/bi";
-import { IoClose } from "react-icons/io5";
 
 function Login() {
   const [errorText, setErrorText] = useState<string | undefined | "loading">(
