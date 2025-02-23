@@ -39,9 +39,9 @@ function SearchBar() {
   return (
     <div
       id="searching"
-      className="relative mt-4 flex flex-col gap-4 px-2 md:mt-8 lg:items-center lg:px-24"
+      className="relative ms-4 flex flex-col gap-4 lg:items-center "
     >
-      <div className="flex h-[50px] w-full items-center border-2 border-[#D9D9D9] bg-[#EAEAEA] dark:border-[#404040] dark:bg-[#242424] lg:w-[500px]">
+      <div className="flex h-[40px] w-[250px] rounded-xl border-2 border-[#D9D9D9] bg-[#EAEAEA] dark:border-[#404040] dark:bg-[#242424] ">
         <input
           onChange={(e) => setSearchText(e.target.value as string)}
           placeholder="Search job title.."

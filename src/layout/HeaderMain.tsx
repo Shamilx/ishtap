@@ -10,6 +10,7 @@ import ChangeTheme from "@/components/ChangeTheme";
 import dynamic from "next/dynamic";
 import { useRouter } from "next/navigation";
 import { useAuth } from "@/context/AuthContext";
+import SearchBar from "@/components/SearchBar";
 
 // Dynamically import the component with ssr: false
 const ClientSideDrawer = dynamic(() => import("./DrawerMain"), {
@@ -23,32 +24,37 @@ function HeaderMain() {
     setIsOpen((prevState) => !prevState);
   };
 
-  const { isAdmin,loading } = useAuth();
+  const { isAdmin, loading } = useAuth();
 
   return (
     <>
       <header
-        className="flex items-center px-2 py-6 text-primary dark:text-white md:px-16"
+        className="flex items-center px-2 py-0 text-primary dark:text-white md:px-16"
         id="headermain"
       >
         <Logo />
 
+        <div className="hidden sm:block">
+          <SearchBar />
+        </div>
+
         <div className="ms-auto flex gap-4 font-bold">
-          {!loading && (isAdmin ? (
-            <ul className="me-6 hidden gap-6 lg:flex">
-              <Link href="/adminpanel">Dashboard</Link>
-              <Link href="/adminpanel/vacancies">Vacancies</Link>
-              <Link href="/adminpanel/companies">Companies</Link>
-              <Link href="/adminpanel/requests">Requests</Link>
-            </ul>
-          ) : (
-            <ul className="me-6 hidden gap-6 lg:flex">
-              <Link href="/home">Home</Link>
-              <Link href="/contact">Contact</Link>
-              <Link href="/aboutus">About us</Link>
-              <Link href="/privacy">Privacy Policy</Link>
-            </ul>
-          ))}
+          {!loading &&
+            (isAdmin ? (
+              <ul className="me-2 hidden gap-6 lg:flex">
+                <Link href="/adminpanel">Dashboard</Link>
+                <Link href="/adminpanel/vacancies">Vacancies</Link>
+                <Link href="/adminpanel/companies">Companies</Link>
+                <Link href="/adminpanel/requests">Requests</Link>
+              </ul>
+            ) : (
+              <ul className="me-2 hidden gap-6 lg:flex">
+                <Link href="/home">Home</Link>
+                <Link href="/contact">Contact</Link>
+                <Link href="/aboutus">About us</Link>
+                <Link href="/privacy">Privacy Policy</Link>
+              </ul>
+            ))}
 
           <ChangeTheme />
 

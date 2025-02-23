@@ -1,5 +1,5 @@
 #headermain {
-  min-height: 120px;
+  min-height: 100px;
 
   #button-change-theme {
     border-radius: 50px;
@@ -35,7 +35,7 @@
       font-weight: 700;
       align-items: center;
       transition: all ease 0.2s;
-
+      font-size: 13px;
       &:hover {
         color: #d8c4b6;
       }

@@ -11,23 +11,24 @@ import SearchBar from "@/components/SearchBar";
 async function Page({ children }: { children: React.ReactNode }) {
   return (
     <div
-      className="flex min-h-[100vh] flex-col bg-white dark:bg-[#141414]"
+      className="md: flex min-h-[100vh] flex-col bg-white dark:bg-[#141414]"
       id="main"
     >
       <HeaderMain />
 
       <div id="main-content" className="flex flex-grow flex-col">
-        <SearchBar />
-
-        <div className="mt-12 hidden w-full border-[1.5px] border-[#EAEAEA] dark:border-[#242424] lg:block"></div>
+        <div className="mt-6 hidden w-full border-[1.5px] border-[#EAEAEA] dark:border-[#242424] lg:block"></div>
 
         <div
           id="content-wrapper"
           className="flex h-full w-full flex-grow flex-col lg:flex-row"
         >
+          <div className="block sm:hidden">
+            <SearchBar />
+          </div>
           <div
             id="navigation"
-            className="mt-12 flex min-w-[250px] flex-row justify-stretch gap-1 border-r-[2px] border-[#EAEAEA] dark:border-[#242424] lg:mt-0 lg:flex-col lg:justify-center lg:gap-4 lg:px-6 lg:py-3"
+            className="mt-6 flex min-w-[250px] flex-row justify-stretch gap-1 border-r-[2px] border-[#EAEAEA] dark:border-[#242424] lg:mt-0 lg:flex-col lg:justify-center lg:gap-4 lg:px-6 lg:py-3"
           >
             <ClientLink
               href={"/vacancies"}
