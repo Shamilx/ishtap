@@ -10,7 +10,7 @@ function BenefitField({
   benefitsToShow?: string[];
   onChange: (newBenefits: string[]) => void;
 }) {
-  const [benefits, setBenefits] = useState(benefitsToShow);
+  const [benefits, setBenefits] = useState(benefitsToShow || [""]);
 
   const handleAdd = () => {
     const updatedBenefits = [...benefits, ""];
@@ -33,20 +33,21 @@ function BenefitField({
 
   return (
     <div>
-      {benefits.map((benefit, i) => (
-        <div key={i} className="flex gap-1">
-          <input
-            type="text"
-            value={benefit}
-            onChange={(e) => handleBenefitChange(i, e.target.value)}
-            placeholder="Enter benefit"
-            className="mt-1 block w-full rounded-md border-2 border-gray-100 ps-1 shadow-sm dark:border-[#404040] dark:bg-[#242424] dark:text-white"
-          />
-          <button type="button" onClick={() => handleDelete(i)}>
-            <CiTrash size={24} color="#C90000" />
-          </button>
-        </div>
-      ))}
+      {benefits &&
+        benefits.map((benefit, i) => (
+          <div key={i} className="flex gap-1">
+            <input
+              type="text"
+              value={benefit}
+              onChange={(e) => handleBenefitChange(i, e.target.value)}
+              placeholder="Enter benefit"
+              className="mt-1 block w-full rounded-md border-2 border-gray-100 ps-1 shadow-sm dark:border-[#404040] dark:bg-[#242424] dark:text-white"
+            />
+            <button type="button" onClick={() => handleDelete(i)}>
+              <CiTrash size={24} color="#C90000" />
+            </button>
+          </div>
+        ))}
 
       <button
         onClick={handleAdd}

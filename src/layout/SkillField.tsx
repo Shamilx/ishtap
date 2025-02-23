@@ -12,7 +12,7 @@ function SkillField({
   skillsToShow?: string[];
   onChange: (newSkills: string[]) => void;
 }) {
-  const [skills, setSkills] = useState(skillsToShow);
+  const [skills, setSkills] = useState(skillsToShow || [""]);
   const [enumSkills, setEnumSkills] = useState<string[] | undefined>();
 
   useEffect(() => {
@@ -45,7 +45,7 @@ function SkillField({
 
   return (
     <div>
-      {enumSkills &&
+      {enumSkills && skills && 
         skills.map((skill, i) => (
           <div key={i} className="flex gap-1">
             <select
